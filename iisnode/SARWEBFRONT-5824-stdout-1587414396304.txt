@@ -1,0 +1,939 @@
+{ USR_SGPLOG_NROROW: 19,
+  USR_SGPLOG_NROCTA: 'pastor',
+  USR_SGPLOG_CODIGO: 'AU000002',
+  USR_SGPLOG_VALORA: 0,
+  USR_SG_FECALT: '2020-04-20T20:29:57.000Z',
+  USR_SG_FECMOD: '2020-04-20T20:29:57.000Z' }
+{ SequelizeUniqueConstraintError: Validation error
+    at Query.formatError (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:285:14)
+    at Request.connection.lib.Request [as userCallback] (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:74:23)
+    at Request.callback (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\request.js:37:27)
+    at Connection.endOfMessageMarkerReceived (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2185:20)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at Parser.tokenStreamParser.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:975:14)
+    at Parser.emit (events.js:198:13)
+    at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+    at Parser.emit (events.js:198:13)
+    at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+    at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+    at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+    at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+    at Parser.afterTransform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:88:10)
+    at Parser._transform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:41:7)
+    at Parser.Transform._read (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at Parser.Transform._write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:405:139)
+    at writeOrBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:394:5)
+    at Parser.Writable.write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:303:11)
+    at Parser.addEndOfMessageMarker (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:45:24)
+    at Connection.message (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2174:32)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at MessageIO.messageIo.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1045:14)
+    at MessageIO.emit (events.js:198:13)
+    at Message.message.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\message-io.js:32:14)
+    at Message.emit (events.js:203:15)
+    at endReadableNT (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:1077:12)
+  name: 'SequelizeUniqueConstraintError',
+  errors:
+   [ ValidationErrorItem {
+       message: 'PK_USR_SGPLOG must be unique',
+       type: 'unique violation',
+       path: 'PK_USR_SGPLOG',
+       value: '19',
+       origin: 'DB',
+       instance: [USR_SGPLOG],
+       validatorKey: 'not_unique',
+       validatorName: null,
+       validatorArgs: [] } ],
+  fields: { PK_USR_SGPLOG: '19' },
+  parent:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'pastor',
+        '2': 'AU000002',
+        '3': 0,
+        '4': '2020-04-20T20:29:57.000Z',
+        '5': '2020-04-20T20:29:57.000Z' } },
+  original:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'pastor',
+        '2': 'AU000002',
+        '3': 0,
+        '4': '2020-04-20T20:29:57.000Z',
+        '5': '2020-04-20T20:29:57.000Z' } },
+  sql:
+   'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;' }
+//Apollo/Global/Sistema de Gestion/uploads/pastor/intercambio
+[]
+2:  //Apollo/Global/Sistema de Gestion/uploads/softla/1579525428972/SARBLD.cwd
+SOFTLA SARBLD 0F1A1AA3CC4AADFC38BC901CE8F8303548A792C6C64DCBCFF8E9FD499D952AA823EE64AD3044BA53ECBD34BEBB48D23F8719AC09F12BF0DF8E39B5622EE5EA62249E37FA47EBBFBF83C11629303619577DE30010CA2E00C551201F4FAC05FC8E7D8E0260AD572DF868C8BF9DC4BCFC0DA6881297CF8793F60198E6183BF4080E3A4CC1896A2DA9964BF7E9FE30C26F4E158EBBCFA5FD0FC6B55C3EB1FB750AAA7EA343249886E9F3
+{ SequelizeDatabaseError: The transaction ended in the trigger. The batch has been aborted.
+    at Query.formatError (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:314:12)
+    at Request.connection.lib.Request [as userCallback] (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:74:23)
+    at Request.callback (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\request.js:37:27)
+    at Connection.endOfMessageMarkerReceived (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2185:20)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at Parser.tokenStreamParser.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:975:14)
+    at Parser.emit (events.js:198:13)
+    at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+    at Parser.emit (events.js:198:13)
+    at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+    at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+    at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+    at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+    at Parser.afterTransform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:88:10)
+    at Parser._transform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:41:7)
+    at Parser.Transform._read (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at Parser.Transform._write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:405:139)
+    at writeOrBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:394:5)
+    at Parser.Writable.write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:303:11)
+    at Parser.addEndOfMessageMarker (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:45:24)
+    at Connection.message (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2174:32)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at MessageIO.messageIo.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1045:14)
+    at MessageIO.emit (events.js:198:13)
+    at Message.message.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\message-io.js:32:14)
+    at Message.emit (events.js:203:15)
+    at endReadableNT (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:1077:12)
+  name: 'SequelizeDatabaseError',
+  parent:
+   { RequestError: The transaction ended in the trigger. The batch has been aborted.
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'The transaction ended in the trigger. The batch has been aborted.',
+     code: 'EREQUEST',
+     number: 3609,
+     state: 1,
+     class: 16,
+     serverName: 'MARINER',
+     procName: 'SLSPWEB_RegistraLicencias',
+     lineNumber: 64,
+     sql:
+      'EXEC SLSPWEB_RegistraLicencias N\'softla\', N\'NL\', N\'null\', N\'ppena@softland.com\', N\'null\', NULL, N\'SOFTLA\', N\'SARBLD\', N\'0F1A1AA3CC4AADFC38BC901CE8F8303548A792C6C64DCBCFF8E9FD499D952AA823EE64AD3044BA53ECBD34BEBB48D23F8719AC09F12BF0DF8E39B5622EE5EA62249E37FA47EBBFBF83C11629303619577DE30010CA2E00C551201F4FAC05FC8E7D8E0260AD572DF868C8BF9DC4BCFC0DA6881297CF8793F60198E6183BF4080E3A4CC1896A2DA9964BF7E9FE30C26F4E158EBBCFA5FD0FC6B55C3EB1FB750AAA7EA343249886E9F3\'',
+     parameters: undefined },
+  original:
+   { RequestError: The transaction ended in the trigger. The batch has been aborted.
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'The transaction ended in the trigger. The batch has been aborted.',
+     code: 'EREQUEST',
+     number: 3609,
+     state: 1,
+     class: 16,
+     serverName: 'MARINER',
+     procName: 'SLSPWEB_RegistraLicencias',
+     lineNumber: 64,
+     sql:
+      'EXEC SLSPWEB_RegistraLicencias N\'softla\', N\'NL\', N\'null\', N\'ppena@softland.com\', N\'null\', NULL, N\'SOFTLA\', N\'SARBLD\', N\'0F1A1AA3CC4AADFC38BC901CE8F8303548A792C6C64DCBCFF8E9FD499D952AA823EE64AD3044BA53ECBD34BEBB48D23F8719AC09F12BF0DF8E39B5622EE5EA62249E37FA47EBBFBF83C11629303619577DE30010CA2E00C551201F4FAC05FC8E7D8E0260AD572DF868C8BF9DC4BCFC0DA6881297CF8793F60198E6183BF4080E3A4CC1896A2DA9964BF7E9FE30C26F4E158EBBCFA5FD0FC6B55C3EB1FB750AAA7EA343249886E9F3\'',
+     parameters: undefined },
+  sql:
+   'EXEC SLSPWEB_RegistraLicencias N\'softla\', N\'NL\', N\'null\', N\'ppena@softland.com\', N\'null\', NULL, N\'SOFTLA\', N\'SARBLD\', N\'0F1A1AA3CC4AADFC38BC901CE8F8303548A792C6C64DCBCFF8E9FD499D952AA823EE64AD3044BA53ECBD34BEBB48D23F8719AC09F12BF0DF8E39B5622EE5EA62249E37FA47EBBFBF83C11629303619577DE30010CA2E00C551201F4FAC05FC8E7D8E0260AD572DF868C8BF9DC4BCFC0DA6881297CF8793F60198E6183BF4080E3A4CC1896A2DA9964BF7E9FE30C26F4E158EBBCFA5FD0FC6B55C3EB1FB750AAA7EA343249886E9F3\'',
+  parameters: undefined }
+//Apollo/Global/Sistema de Gestion/uploads/CABODI/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/CABODI/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/CABODI/intercambio
+[]
+body
+{ nrocta: 'CABODI',
+  codfor: 'CL',
+  nrofor: '22363',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+CABODI SP CL 22363 200 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 22363,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 11,
+    FCHMOV: 2020-04-20T17:40:46.570Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/CABODI/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/G4CONS/intercambio
+[ 'ARCHIVOS PADRON TUCUMAN.zip',
+  'CL 27007.zip',
+  'CL 27726 .zip',
+  'CL 27978.zip',
+  'CL-28154.zip',
+  'ST_WA_STRMVH.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/G4CONS/intercambio
+[ 'ARCHIVOS PADRON TUCUMAN.zip',
+  'CL 27007.zip',
+  'CL 27726 .zip',
+  'CL 27978.zip',
+  'CL-28154.zip',
+  'ST_WA_STRMVH.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/astrak/intercambio
+[ 'CL 28395.zip',
+  'CL-20384.zip',
+  'CORMVH_NROSUB.zip',
+  'MRR-99.mdb',
+  'MRR-99.zip' ]
+body
+{ nrocta: 'astrak',
+  codfor: 'CL',
+  nrofor: '28607',
+  estnew: null,
+  asgare: null,
+  asgres: null,
+  obscli:
+   'Emilu, No tenia el tilde de Aplica Tasa de Tabla cero, ahora se tildo, pero cuando se reprocesa el calculo de retenciones para que actualice la que ya genero, sigue trayendo el 3%',
+  adjunto: null,
+  valora: null }
+body
+ASTRAK SP CL 28607 null null null Emilu, No tenia el tilde de Aplica Tasa de Tabla cero, ahora se tildo, pero cuando se reprocesa el calculo de retenciones para que actualice la que ya genero, sigue trayendo el 3% null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 28607,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '000',
+    NROITM: 3,
+    FCHMOV: 2020-04-20T17:59:30.353Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+2:  //Apollo/Global/Sistema de Gestion/uploads/softla/1587416852485/1
+SOFTLA SARCL 9B7EF6AB4C8641C89C947090DCB43545D0CC0BE89C7133D86D6FBB7B6A091D7BA358084A418307C4EB8D6BD847AA59DED249CA80BDF18FE0AB587951492BCD7C5C3836C94FF726219E4517A69879CA52F0428BC0EC917B188D893F3C82433D1D7C1D0AC321F1B3C4ED59C2EA41BA3D335BB3544F8BDCA343FF5B93F1073CB7E364C74F3069AD9BEFF10424890838E8576C279B631A2C4996DED57BE3D98BE3885C0E5309
+[]
+TypeError: Cannot read property 'status' of undefined
+    at _entityService.postHabilitacion.then (C:\SGPWEB\SGP_NODE_BACKENDII\api\controllers\habilitacion.controller.js:93:28)
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+//Apollo/Global/Sistema de Gestion/uploads/tropfe/intercambio
+[ 'PADRON ARCIBA CORREGIDO 12 2019.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/salesi/intercambio
+[ 'CL 27699.zip',
+  'CL 28217  .zip',
+  'CL 28280.zip',
+  'CL 28334 .zip',
+  'CL 28348.zip',
+  'CL- 28400.zip',
+  'CV_WW_CVRMVH.zip',
+  'GRWF1Fact.zip',
+  'SetupSAR_4.3_SPTicket_DB-0000_SVNRev_3572.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/celusa/intercambio
+[ 'Ajuste por Inflación.xlsx',
+  'Caso REI  - CL 26329.xlsx',
+  'CG_WR_CGRAJH.zip',
+  'CJ_WW_CJANUL.dll_Parte-CL-23064-1_4.1.0.zip',
+  'CL 16419.zip',
+  'CL 21763.zip',
+  'CL 23683  .zip',
+  'CL 24206.zip',
+  'CL 26119 .zip',
+  'CL 27565.zip',
+  'CL 27852.zip',
+  'CL- 27213',
+  'CL- 27213.zip',
+  'FCEITEM.zip',
+  'IG_WW_CGRMVH.zip',
+  'SR-550.zip',
+  'VIRT_VUELTO en FCRMVI08' ]
+e No se puede grabar el registro
+e No se puede grabar el registro
+{ USR_SGPLOG_NROROW: 19,
+  USR_SGPLOG_NROCTA: 'celusa',
+  USR_SGPLOG_VALORA: 0,
+  USR_SG_FECALT: '2020-04-20T22:01:43.000Z',
+  USR_SG_FECMOD: '2020-04-20T22:01:43.000Z' }
+{ SequelizeUniqueConstraintError: Validation error
+    at Query.formatError (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:285:14)
+    at Request.connection.lib.Request [as userCallback] (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:74:23)
+    at Request.callback (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\request.js:37:27)
+    at Connection.endOfMessageMarkerReceived (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2185:20)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at Parser.tokenStreamParser.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:975:14)
+    at Parser.emit (events.js:198:13)
+    at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+    at Parser.emit (events.js:198:13)
+    at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+    at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+    at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+    at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+    at Parser.afterTransform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:88:10)
+    at Parser._transform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:41:7)
+    at Parser.Transform._read (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at Parser.Transform._write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:405:139)
+    at writeOrBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:394:5)
+    at Parser.Writable.write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:303:11)
+    at Parser.addEndOfMessageMarker (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:45:24)
+    at Connection.message (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2174:32)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at MessageIO.messageIo.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1045:14)
+    at MessageIO.emit (events.js:198:13)
+    at Message.message.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\message-io.js:32:14)
+    at Message.emit (events.js:203:15)
+    at endReadableNT (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:1077:12)
+  name: 'SequelizeUniqueConstraintError',
+  errors:
+   [ ValidationErrorItem {
+       message: 'PK_USR_SGPLOG must be unique',
+       type: 'unique violation',
+       path: 'PK_USR_SGPLOG',
+       value: '19',
+       origin: 'DB',
+       instance: [USR_SGPLOG],
+       validatorKey: 'not_unique',
+       validatorName: null,
+       validatorArgs: [] } ],
+  fields: { PK_USR_SGPLOG: '19' },
+  parent:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 0,
+        '3': '2020-04-20T22:01:43.000Z',
+        '4': '2020-04-20T22:01:43.000Z' } },
+  original:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 0,
+        '3': '2020-04-20T22:01:43.000Z',
+        '4': '2020-04-20T22:01:43.000Z' } },
+  sql:
+   'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4);select * from @tmp;' }
+e No
+e No
+e N
+e c
+e co
+e con
+e conc
+e conci
+{ USR_SGPLOG_NROROW: 19,
+  USR_SGPLOG_NROCTA: 'celusa',
+  USR_SGPLOG_CODIGO: 'CB000010',
+  USR_SGPLOG_VALORA: 0,
+  USR_SG_FECALT: '2020-04-20T22:01:48.000Z',
+  USR_SG_FECMOD: '2020-04-20T22:01:48.000Z' }
+{ SequelizeUniqueConstraintError: Validation error
+    at Query.formatError (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:285:14)
+    at Request.connection.lib.Request [as userCallback] (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:74:23)
+    at Request.callback (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\request.js:37:27)
+    at Connection.endOfMessageMarkerReceived (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2185:20)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at Parser.tokenStreamParser.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:975:14)
+    at Parser.emit (events.js:198:13)
+    at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+    at Parser.emit (events.js:198:13)
+    at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+    at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+    at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+    at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+    at Parser.afterTransform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:88:10)
+    at Parser._transform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:41:7)
+    at Parser.Transform._read (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at Parser.Transform._write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:405:139)
+    at writeOrBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:394:5)
+    at Parser.Writable.write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:303:11)
+    at Parser.addEndOfMessageMarker (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:45:24)
+    at Connection.message (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2174:32)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at MessageIO.messageIo.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1045:14)
+    at MessageIO.emit (events.js:198:13)
+    at Message.message.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\message-io.js:32:14)
+    at Message.emit (events.js:203:15)
+    at endReadableNT (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:1077:12)
+  name: 'SequelizeUniqueConstraintError',
+  errors:
+   [ ValidationErrorItem {
+       message: 'PK_USR_SGPLOG must be unique',
+       type: 'unique violation',
+       path: 'PK_USR_SGPLOG',
+       value: '19',
+       origin: 'DB',
+       instance: [USR_SGPLOG],
+       validatorKey: 'not_unique',
+       validatorName: null,
+       validatorArgs: [] } ],
+  fields: { PK_USR_SGPLOG: '19' },
+  parent:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 'CB000010',
+        '3': 0,
+        '4': '2020-04-20T22:01:48.000Z',
+        '5': '2020-04-20T22:01:48.000Z' } },
+  original:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 'CB000010',
+        '3': 0,
+        '4': '2020-04-20T22:01:48.000Z',
+        '5': '2020-04-20T22:01:48.000Z' } },
+  sql:
+   'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;' }
+{ USR_SGPLOG_NROROW: 19,
+  USR_SGPLOG_NROCTA: 'celusa',
+  USR_SGPLOG_CODIGO: 'CB000010',
+  USR_SGPLOG_VALORA: 0,
+  USR_SG_FECALT: '2020-04-20T21:55:44.000Z',
+  USR_SG_FECMOD: '2020-04-20T21:55:44.000Z' }
+{ SequelizeUniqueConstraintError: Validation error
+    at Query.formatError (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:285:14)
+    at Request.connection.lib.Request [as userCallback] (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\sequelize\lib\dialects\mssql\query.js:74:23)
+    at Request.callback (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\request.js:37:27)
+    at Connection.endOfMessageMarkerReceived (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2185:20)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at Parser.tokenStreamParser.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:975:14)
+    at Parser.emit (events.js:198:13)
+    at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+    at Parser.emit (events.js:198:13)
+    at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+    at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+    at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+    at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+    at Parser.afterTransform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:88:10)
+    at Parser._transform (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:41:7)
+    at Parser.Transform._read (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:177:10)
+    at Parser.Transform._write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:164:83)
+    at doWrite (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:405:139)
+    at writeOrBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:394:5)
+    at Parser.Writable.write (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_writable.js:303:11)
+    at Parser.addEndOfMessageMarker (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:45:24)
+    at Connection.message (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:2174:32)
+    at Connection.dispatchEvent (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1172:36)
+    at MessageIO.messageIo.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:1045:14)
+    at MessageIO.emit (events.js:198:13)
+    at Message.message.on (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\message-io.js:32:14)
+    at Message.emit (events.js:203:15)
+    at endReadableNT (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:1077:12)
+  name: 'SequelizeUniqueConstraintError',
+  errors:
+   [ ValidationErrorItem {
+       message: 'PK_USR_SGPLOG must be unique',
+       type: 'unique violation',
+       path: 'PK_USR_SGPLOG',
+       value: '19',
+       origin: 'DB',
+       instance: [USR_SGPLOG],
+       validatorKey: 'not_unique',
+       validatorName: null,
+       validatorArgs: [] } ],
+  fields: { PK_USR_SGPLOG: '19' },
+  parent:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 'CB000010',
+        '3': 0,
+        '4': '2020-04-20T21:55:44.000Z',
+        '5': '2020-04-20T21:55:44.000Z' } },
+  original:
+   { RequestError: Violation of PRIMARY KEY constraint 'PK_USR_SGPLOG'. Cannot insert duplicate key in object 'dbo.USR_SGPLOG'. The duplicate key value is (19).
+       at Parser.tokenStreamParser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\connection.js:740:27)
+       at Parser.emit (events.js:198:13)
+       at Parser.parser.on.token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\token-stream-parser.js:27:14)
+       at Parser.emit (events.js:198:13)
+       at addChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:297:12)
+       at readableAddChunk (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:279:11)
+       at Parser.Readable.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_readable.js:240:10)
+       at Parser.Transform.push (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\readable-stream\lib\_stream_transform.js:139:32)
+       at doneParsing (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:80:14)
+       at token (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:48:5)
+       at call.lineNumber (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:13:19)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:179:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt32LE (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:176:10)
+       at parser.readBVarChar.procName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:12:90)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readBuffer (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:305:10)
+       at readUInt8.length (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:315:12)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:123:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+       at Parser.readUInt8 (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:120:10)
+       at Parser.readBVarChar (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:314:10)
+       at parser.readBVarChar.serverName (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\infoerror-token-parser.js:11:22)
+       at readBuffer.data (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:316:9)
+       at awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:308:7)
+       at Parser.awaitData (C:\SGPWEB\SGP_NODE_BACKENDII\node_modules\tedious\lib\token\stream-parser.js:103:7)
+     message:
+      'Violation of PRIMARY KEY constraint \'PK_USR_SGPLOG\'. Cannot insert duplicate key in object \'dbo.USR_SGPLOG\'. The duplicate key value is (19).',
+     code: 'EREQUEST',
+     number: 2627,
+     state: 1,
+     class: 14,
+     serverName: 'MARINER',
+     procName: '',
+     lineNumber: 1,
+     sql:
+      'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;',
+     parameters:
+      { '0': 19,
+        '1': 'celusa',
+        '2': 'CB000010',
+        '3': 0,
+        '4': '2020-04-20T21:55:44.000Z',
+        '5': '2020-04-20T21:55:44.000Z' } },
+  sql:
+   'declare @tmp table ([USR_SGPLOG_NROROW] INTEGER,[USR_SGPLOG_NROCTA] NVARCHAR(255),[USR_SGPLOG_CODIGO] NVARCHAR(255),[USR_SGPLOG_VALORA] INTEGER,[USR_SG_FECALT] NVARCHAR(255),[USR_SG_FECMOD] NVARCHAR(255));INSERT INTO [USR_SGPLOG] ([USR_SGPLOG_NROROW],[USR_SGPLOG_NROCTA],[USR_SGPLOG_CODIGO],[USR_SGPLOG_VALORA],[USR_SG_FECALT],[USR_SG_FECMOD]) OUTPUT INSERTED.[USR_SGPLOG_NROROW],INSERTED.[USR_SGPLOG_NROCTA],INSERTED.[USR_SGPLOG_CODIGO],INSERTED.[USR_SGPLOG_VALORA],INSERTED.[USR_SG_FECALT],INSERTED.[USR_SG_FECMOD] into @tmp VALUES (@0,@1,@2,@3,@4,@5);select * from @tmp;' }
+//Apollo/Global/Sistema de Gestion/uploads/sursem/intercambio
+[ 'Fecha de pago setup mayor o igual a 4.3.3388.zip',
+  'VIRT_VUELTO en FCRMVI08.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/tropfe/intercambio
+[ 'PADRON ARCIBA CORREGIDO 12 2019.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+2:  //Apollo/Global/Sistema de Gestion/uploads/sac/1587391460951/pedido
+SAC NINB 039EDEAF742AC1DCA8B44458986038313F79D6B3C849FEAA416F73FA9E34C082A743B2704E665DDDBE39EDF0419868E0E397AC88DDD4567FEBB4C92E70FAD170F9B0E535FD609B948CD500B514593999A7BE313691B81326206946A52AEFD9208BA529944C4A7C36B071D04856F1E071726C6C890E3BF0472CC1745A7F4C08AC20BCB43E842FDEC692062EB7AD118D9263EE29AD63EF1AD5D4A4F1D273BD5ECFD4
+[]
+TypeError: Cannot read property 'status' of undefined
+    at _entityService.postHabilitacion.then (C:\SGPWEB\SGP_NODE_BACKENDII\api\controllers\habilitacion.controller.js:93:28)
+body
+{ nrocta: 'neumat',
+  codfor: 'CL',
+  nrofor: '28551',
+  estnew: '100',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+NEUMAT SP CL 28551 100 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 28551,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '100',
+    NROITM: 3,
+    FCHMOV: 2020-04-20T19:13:10.457Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/softla/intercambio
+[ 'IN_WW_IMTREX.dll', 'TEMPLATE-20191024bak.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/softla/intercambio
+[ 'IN_WW_IMTREX.dll', 'TEMPLATE-20191024bak.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]

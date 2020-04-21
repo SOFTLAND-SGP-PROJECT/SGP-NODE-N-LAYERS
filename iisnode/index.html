@@ -1,0 +1,87 @@
+<html>
+<head>
+    <title>iisnode logs</title>
+    <style type="text/css">
+        body
+        {
+            font-family: "Trebuchet MS" , Arial, Helvetica, sans-serif;
+        }
+        table
+        {
+            border-collapse: collapse;
+        }
+        td, th
+        {
+            border: 1px solid lightgray;
+            padding: 3px 7px 2px 7px;
+        }
+        th
+        {
+            text-align: left;
+            padding-top: 5px;
+            padding-bottom: 4px;
+            background-color: Gray;
+            color: #ffffff;
+        }
+        td.stderr
+        {
+            color: Red;
+        }
+    </style>
+</head>
+<body>
+    <table id="logFilesTable">
+        <tr>
+            <th>
+                Computer name
+            </th>
+            <th>
+                PID
+            </th>
+            <th>
+                Type
+            </th>
+            <th>
+                Created
+            </th>
+            <th>
+                Link
+            </th>
+        </tr>
+    </table>
+    <p id="lastUpdated"></p>
+    <script type="text/javascript">
+
+        // this is replaced with actual data at runtime by code in interceptor.js
+        var logFiles = [{"file":"SARWEBFRONT-1972-stderr-1576457529621.txt","computername":"SARWEBFRONT","pid":1972,"type":"stderr","created":1576457529621},{"file":"SARWEBFRONT-2872-stderr-1576457672194.txt","computername":"SARWEBFRONT","pid":2872,"type":"stderr","created":1576457672194},{"file":"SARWEBFRONT-2872-stdout-1576457672190.txt","computername":"SARWEBFRONT","pid":2872,"type":"stdout","created":1576457672190},{"file":"SARWEBFRONT-3004-stderr-1576462183602.txt","computername":"SARWEBFRONT","pid":3004,"type":"stderr","created":1576462183602},{"file":"SARWEBFRONT-3004-stdout-1576462183596.txt","computername":"SARWEBFRONT","pid":3004,"type":"stdout","created":1576462183596},{"file":"SARWEBFRONT-3380-stderr-1576457552856.txt","computername":"SARWEBFRONT","pid":3380,"type":"stderr","created":1576457552856},{"file":"SARWEBFRONT-3936-stderr-1576446718846.txt","computername":"SARWEBFRONT","pid":3936,"type":"stderr","created":1576446718846},{"file":"SARWEBFRONT-4444-stderr-1576457633572.txt","computername":"SARWEBFRONT","pid":4444,"type":"stderr","created":1576457633572},{"file":"SARWEBFRONT-4448-stderr-1576457515131.txt","computername":"SARWEBFRONT","pid":4448,"type":"stderr","created":1576457515131},{"file":"SARWEBFRONT-5624-stderr-1582394026525.txt","computername":"SARWEBFRONT","pid":5624,"type":"stderr","created":1582394026525},{"file":"SARWEBFRONT-5624-stdout-1582394026516.txt","computername":"SARWEBFRONT","pid":5624,"type":"stdout","created":1582394026516},{"file":"SARWEBFRONT-5836-stderr-1576446716342.txt","computername":"SARWEBFRONT","pid":5836,"type":"stderr","created":1576446716342},{"file":"SARWEBFRONT-6012-stderr-1576455173916.txt","computername":"SARWEBFRONT","pid":6012,"type":"stderr","created":1576455173916},{"file":"SARWEBFRONT-6428-stderr-1576460074375.txt","computername":"SARWEBFRONT","pid":6428,"type":"stderr","created":1576460074375},{"file":"SARWEBFRONT-6428-stdout-1576460074369.txt","computername":"SARWEBFRONT","pid":6428,"type":"stdout","created":1576460074369},{"file":"SARWEBFRONT-6680-stderr-1576457551512.txt","computername":"SARWEBFRONT","pid":6680,"type":"stderr","created":1576457551512},{"file":"SARWEBFRONT-7560-stderr-1576457634854.txt","computername":"SARWEBFRONT","pid":7560,"type":"stderr","created":1576457634854},{"file":"SARWEBFRONT-7608-stderr-1576455174981.txt","computername":"SARWEBFRONT","pid":7608,"type":"stderr","created":1576455174981},{"file":"SARWEBFRONT-7668-stderr-1576455172585.txt","computername":"SARWEBFRONT","pid":7668,"type":"stderr","created":1576455172585},{"file":"SARWEBFRONT-7736-stderr-1576457628905.txt","computername":"SARWEBFRONT","pid":7736,"type":"stderr","created":1576457628905},{"file":"SARWEBFRONT-8076-stderr-1576446717502.txt","computername":"SARWEBFRONT","pid":8076,"type":"stderr","created":1576446717502},{"file":"SARWEBFRONT-8128-stderr-1576457518250.txt","computername":"SARWEBFRONT","pid":8128,"type":"stderr","created":1576457518250}];
+        var lastUpdated = 1582394027622;
+        var date = new Date();
+
+        date.setTime(lastUpdated);
+        document.getElementById('lastUpdated').innerHTML = 'Index was last updated ' + date;
+
+        logFiles.sort(function (a, b) {
+            return b.created - a.created;
+        });
+
+        var logFilesTable = document.getElementById("logFilesTable");
+        for (var i = 0; i < logFiles.length; i++) {
+            var logFile = logFiles[i];
+            date.setTime(logFile.created);
+            var row = logFilesTable.insertRow(-1);
+            var computerNameCell = row.insertCell(0);
+            var pidCell = row.insertCell(1);
+            var typeCell = row.insertCell(2);
+            var dateCell = row.insertCell(3);
+            var logCell = row.insertCell(4);
+            computerNameCell.innerHTML = logFile.computername;
+            pidCell.innerHTML = logFile.pid.toString();
+            typeCell.innerHTML = logFile.type;
+            typeCell.setAttribute('class', logFile.type);
+            dateCell.innerHTML = date.toString();
+            logCell.innerHTML = '<a href="' + logFile.file + '">log</a>';
+        };
+
+    </script>
+</body>
+</html>
