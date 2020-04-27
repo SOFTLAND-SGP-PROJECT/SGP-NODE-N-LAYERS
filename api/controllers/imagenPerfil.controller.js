@@ -42,22 +42,14 @@ class ImagenPerfilController extends Controller {
             return res.status(400).send('No hay archivos para subir.');
         }
         let path = this.crearFolder(nrocta);
-        // if (Array.isArray(req.files.filelist)) {
-        //     for (let file of req.files.filelist) {
-        //         this.moverArchivos(path, file, file.name);
-        //     }
-        // } else {
-        //     
         console.log(req.files);
         var arrFilename = req.files[''].name.split('.');
         var newFilename = `${nrocta}.${arrFilename[1]}`;
         this.moverArchivos(path, req.files[''], newFilename, nrocta);
-        // this.moverArchivos(path, req.files.filelist, req.files.filelist.name, nrocta);
         return res.status(200).json({
             ok: true,
             payload: `${path}${newFilename}`
         });
-        // }
 
     }
     moverArchivos(path, file, filename, nrocta) {

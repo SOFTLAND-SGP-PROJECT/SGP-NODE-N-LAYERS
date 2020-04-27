@@ -14,11 +14,11 @@ class ImagenesController extends Controller {
         const { tipo, parte, img } = req.params;
         console.log(tipo, parte, img);
         
-        var pathImagen = path.resolve('C:/SGPWEB/SGP_NODE_BACKENDII/', `upload/${tipo}/${parte}/${img}`);
+        var pathImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', `upload/${tipo}/${parte}/${img}`);
         if (fs.existsSync(pathImagen)) {
             await res.sendFile(pathImagen);
         } else {
-            var pathNoImagen = path.resolve('C:/SGPWEB/SGP_NODE_BACKENDII/', 'assets/no-image.png');
+            var pathNoImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', 'assets/no-image.png');
             await res.sendFile(pathNoImagen);
         }
     }
