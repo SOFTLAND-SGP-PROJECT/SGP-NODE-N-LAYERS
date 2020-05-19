@@ -1,5 +1,6 @@
 node_modules/
 # Configuracion de la pagina
 config.js
+config.json
 # imagen
 desktop.ini

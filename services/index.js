@@ -13,5 +13,6 @@ module.exports = {
     OcurrenciaService: require("./ocurrencia.service"),
     ImpactoService: require("./impacto.service"),
     VotacionService: require("./votacion.service"),
-    SecurityService: require("./security.service")
+    SecurityService: require("./security.service"),
+    ParametroService: require("./parametro.service")
 };

@@ -27,7 +27,8 @@ const {
 // mongo repositories
 const {
     PerfilRepository,
-    AsignadoRepository
+    AsignadoRepository,
+    ParametroRepository
 } = require("../data-mongo-access/repositories");
 
 // business
@@ -51,7 +52,8 @@ const {
     OcurrenciaService,
     ImpactoService,
     VotacionService,
-    SecurityService
+    SecurityService,
+    ParametroService
 } = require("../services");
 
 // controllers
@@ -74,7 +76,8 @@ const {
     VotacionController,
     SecurityController,
     ImagenPerfilController,
-    LoginController
+    LoginController,
+    ParametroController
 } = require("../api/controllers");
 
 //Routes
@@ -98,6 +101,8 @@ const VotacionRoutes = require("../api/routes/votacion.routes");
 const SecurityRoutes = require("../api/routes/security.routes");
 const ImagenPerfilRoutes = require("../api/routes/imagenPerfil.routes");
 const LoginRoutes = require("../api/routes/login.routes");
+const ParametroRoutes = require("../api/routes/parametro.routes");
+
 //App
 const Server = require("./server");
 const config = require('../config/config');
@@ -144,7 +149,9 @@ container
         ImagenPerfilController: asClass(ImagenPerfilController).singleton(),
         ImagenPerfilRoutes: asFunction(ImagenPerfilRoutes).singleton(),
         LoginController: asClass(LoginController).singleton(),
-        LoginRoutes: asFunction(LoginRoutes).singleton()
+        LoginRoutes: asFunction(LoginRoutes).singleton(),
+        ParametroController: asClass(ParametroController).singleton(),
+        ParametroRoutes: asFunction(ParametroRoutes).singleton()
     })
     .register({
         ModuloRepository: asClass(ModuloRepository).singleton(),
@@ -162,7 +169,9 @@ container
         OcurrenciaRepository: asClass(OcurrenciaRepository).singleton(),
         VotacionRepository: asClass(VotacionRepository).singleton(),
         PerfilRepository: asClass(PerfilRepository).singleton(),
-        AsignadoRepository: asClass(AsignadoRepository).singleton()
+        AsignadoRepository: asClass(AsignadoRepository).singleton(),
+        ParametroRepository: asClass(ParametroRepository).singleton()
+
     })
     .register({
         ModuloService: asClass(ModuloService).singleton(),
@@ -179,7 +188,8 @@ container
         ImpactoService: asClass(ImpactoService).singleton(),
         OcurrenciaService: asClass(OcurrenciaService).singleton(),
         VotacionService: asClass(VotacionService).singleton(),
-        SecurityService: asClass(SecurityService).singleton()
+        SecurityService: asClass(SecurityService).singleton(),
+        ParametroService: asClass(ParametroService).singleton()
     })
     .register({
         Profile: asClass(Profile).singleton()
