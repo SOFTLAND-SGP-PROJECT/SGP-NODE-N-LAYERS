@@ -20,7 +20,7 @@ class PartePublicoController {
         if (!req.files || Object.keys(req.files).length === 0) {
             return res.status(400).send('No hay archivos para subir.');
         }
-        let path = this.crearFolder(username,  newfolder);
+        let path = this.crearFolder(username, newfolder);
         console.log('4: ', path);
         console.log(req.files);
 
@@ -63,6 +63,8 @@ class PartePublicoController {
         let link = ruta.split('&').join('/');
         const newLink = ruta.split('&');
         const filename = newLink.pop();
+        console.log(`//Apollo/Global/Sistema de Gestion/uploads/${link}`);
+        console.log(filename);
 
         res.download(`//Apollo/Global/Sistema de Gestion/uploads/${link}`, filename, function(err, res) {
             if (err) {

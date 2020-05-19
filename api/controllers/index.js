@@ -17,5 +17,6 @@ module.exports = {
     VotacionController: require("./votacion.controller"),
     SecurityController: require("./security.controller"),
     ImagenPerfilController: require("./imagenPerfil.controller"),
-    LoginController: require("./login.controller")
+    LoginController: require("./login.controller"),
+    ParametroController: require("./parametro.controller")
 };

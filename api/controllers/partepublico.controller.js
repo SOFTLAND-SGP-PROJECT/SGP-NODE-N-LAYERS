@@ -8,7 +8,7 @@ const { rutaPP } = require('../../config/config');
 
 class PartePublicoController extends Controller {
 
-    constructor({ PartePublicoService }) {
+    constructor({ PartePublicoService, ParametroService }) {
         super(PartePublicoService, Models.partepublico);
         this._entityMap = Models.partepublico;
         this._entityMapTermino = Models.partepublicoReducido;
@@ -73,7 +73,9 @@ class PartePublicoController extends Controller {
     }
     async postParte(req, res) {
         var parte = req.body;
-        const entities = await this._entityService.postParte(parte)
+        console.log(parte);
+
+        await this._entityService.postParte(parte)
             .then((parte) => {
                 if ((parte && parte.length === 0) || !parte) {
                     console.log('El parte no se pudo cargar');
@@ -83,25 +85,30 @@ class PartePublicoController extends Controller {
                         message: 'El parte no se pudo cargar',
                     });
                 }
+                console.log(parte);
+
                 return res.status(201).json({
                     ok: true,
                     payload: `Parte ${parte.USR_SPTERH_CODIGO} cargado con Exito`
                 });
             })
             .catch(error => {
+
+                console.log(error);
+
                 return res.status(500).json({
                     ok: false,
                     payload: error
                 });
-            })
+            });
     }
     async postArchivos(req, res) {
-        var { tipo, id, imagen } = req.params;
+        var { tipo, id } = req.params;
         if (!req.files) {
             return res.status(400).json({
                 ok: false,
                 mensaje: 'No selecciono nada',
-                errors: { message: 'Debe de seleccionar una imagen' }
+                errors: { message: 'Debe de seleccionar un archivo' }
             });
         }
         if (!req.files || Object.keys(req.files).length === 0) {
@@ -109,27 +116,41 @@ class PartePublicoController extends Controller {
         }
         var path = this.crearFolder(tipo, id);
         for (let key of Object.keys(req.files)) {
-            switch (key) {
-                case 'item0':
-                    this.moverArchivos(req.files.item0, req.files.item0.name, tipo, path);
-                    break;
-                case 'item1':
-                    this.moverArchivos(req.files.item1, req.files.item1.name, tipo, path);
-                    break;
-                case 'item2':
-                    this.moverArchivos(req.files.item2, req.files.item2.name, tipo, path);
-                    break;
-                case 'item3':
-                    this.moverArchivos(req.files.item3, req.files.item3.name, tipo, path);
-                    break;
-                case 'item4':
-                    this.moverArchivos(req.files.item4, req.files.item4.name, tipo, path);
-                    break;
-                case 'item5':
-                    this.moverArchivos(req.files.item5, req.files.item5.name, tipo, path);
-                    break;
+            if (key.includes('imagen')) {
+                path = this.crearFolder(tipo, id + '/imagen/');
+
+                this.moverArchivos(req.files[key], req.files[key].name, path);
+            }
+            if (key.includes('link')) {
+                var path = this.crearFolder(tipo, id + '/link/');
+                this.moverArchivos(req.files[key], req.files[key].name, path);
             }
         }
+
+
+
+        // for (let key of Object.keys(req.files)) {
+        //     switch (key) {
+        //         case 'item0':
+        //             this.moverArchivos(req.files.item0, req.files.item0.name, tipo, path);
+        //             break;
+        //         case 'item1':
+        //             this.moverArchivos(req.files.item1, req.files.item1.name, tipo, path);
+        //             break;
+        //         case 'item2':
+        //             this.moverArchivos(req.files.item2, req.files.item2.name, tipo, path);
+        //             break;
+        //         case 'item3':
+        //             this.moverArchivos(req.files.item3, req.files.item3.name, tipo, path);
+        //             break;
+        //         case 'item4':
+        //             this.moverArchivos(req.files.item4, req.files.item4.name, tipo, path);
+        //             break;
+        //         case 'item5':
+        //             this.moverArchivos(req.files.item5, req.files.item5.name, tipo, path);
+        //             break;
+        //     }
+        // }
 
 
         return res.status(200).json({
@@ -140,6 +161,8 @@ class PartePublicoController extends Controller {
     async getImagenes(req, res) {
         const { tipo, img } = req.params;
         var pathImagen = path.resolve(__dirname, `../upload/${tipo}/${img}`);
+        console.log(pathImagen);
+
         if (fs.existsSync(pathImagen)) {
             await res.sendFile(pathImagen);
         } else {
@@ -148,33 +171,32 @@ class PartePublicoController extends Controller {
         }
     }
     async deleteParte(req, res) {
-            const { codigo } = req.params;
-            const entities = await this._entityService.deleteParte(codigo)
-                .then((resp) => {
-                    if (!resp) {
-                        return res.status(400).json({
-                            ok: false,
-                            message: 'El parte no se pudo cargar',
-                        });
-                    }
-                    return res.status(200).json({
-                        ok: true,
-                        payload: resp
-                    });
-                })
-                .catch(error => {
-                    return res.status(500).json({
+        const { codigo } = req.params;
+        const entities = await this._entityService.deleteParte(codigo)
+            .then((resp) => {
+                if (!resp) {
+                    return res.status(400).json({
                         ok: false,
-                        payload: error
+                        message: 'El parte no se pudo cargar',
                     });
+                }
+                return res.status(200).json({
+                    ok: true,
+                    payload: resp
                 });
+            })
+            .catch(error => {
+                return res.status(500).json({
+                    ok: false,
+                    payload: error
+                });
+            });
 
-        }
-        //Funciones auxiliares
-    moverArchivos(file, filename, tipo, folder) {
+    }
+
+    //Funciones auxiliares
+    moverArchivos(file, filename, folder) {
         var path = `${folder}${filename}`;
-        console.log(path);
-
         file.mv(path, function(err, res) {
             if (err) {
                 if (res) {
@@ -190,7 +212,7 @@ class PartePublicoController extends Controller {
         });
     }
     crearFolder(tipo, folderName) {
-        var dirPath = `${rutaPP}/${tipo}/${folderName}/`;
+        var dirPath = `${rutaPP}/${tipo}/${folderName}`;
         if (!fs.existsSync(dirPath)) {
             try {
                 fs.mkdirSync(dirPath);

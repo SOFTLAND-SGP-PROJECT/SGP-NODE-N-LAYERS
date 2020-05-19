@@ -4,6 +4,6 @@ const express = require("express");
 module.exports = function({ ImagenesController }) {
     const router = Router();
 
-    router.get("/:tipo/:parte/:img", ImagenesController.getImagenes.bind(ImagenesController));
+    router.get("/:tipo/:parte/:folder/:img", ImagenesController.getImagenes.bind(ImagenesController));
     return router;
 };

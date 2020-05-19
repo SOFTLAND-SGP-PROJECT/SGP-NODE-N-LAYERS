@@ -11,17 +11,26 @@ class ImagenesController extends Controller {
     }
 
     async getImagenes(req, res) {
-        const { tipo, parte, img } = req.params;
-        console.log(tipo, parte, img);
-        
-        var pathImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', `upload/${tipo}/${parte}/${img}`);
-        if (fs.existsSync(pathImagen)) {
-            await res.sendFile(pathImagen);
+        const { tipo, parte, img, folder } = req.params;
+        console.log(folder);
+        var pathImagen = path.resolve('../QA-NODE-N-LAYERS', `upload/${tipo}/${parte}/${folder}/${img}`);
+
+        if (folder === 'link') {
+            if (fs.existsSync(pathImagen)) {
+                await res.download(pathImagen, `${img}`);
+            }
         } else {
-            var pathNoImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', 'assets/no-image.png');
-            await res.sendFile(pathNoImagen);
+            // var pathImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', `upload/${tipo}/${parte}/${folder}/${img}`);
+            if (fs.existsSync(pathImagen)) {
+                await res.sendFile(pathImagen);
+            } else {
+                var pathNoImagen = path.resolve('../QA-NODE-N-LAYERS', 'assets/no-image.png');
+                await res.sendFile(pathNoImagen);
+            }
         }
+
     }
+
 
 }
 module.exports = ImagenesController;

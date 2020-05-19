@@ -28,7 +28,8 @@ module.exports = function({
     VotacionRoutes,
     SecurityRoutes,
     ImagenPerfilRoutes,
-    LoginRoutes
+    LoginRoutes,
+    ParametroRoutes
 }) {
 
     const router = express.Router();
@@ -98,6 +99,7 @@ module.exports = function({
     apiRoute.use("/img", ImagenesRoutes);
     apiRoute.use("/security", SecurityRoutes);
     apiRoute.use("/perfil", ImagenPerfilRoutes);
+    apiRoute.use("/parametro", ParametroRoutes);
 
     router.use("/", apiRoute);
     return router;

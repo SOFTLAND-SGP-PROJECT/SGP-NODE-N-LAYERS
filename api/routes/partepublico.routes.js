@@ -7,7 +7,7 @@ module.exports = function({ PartePublicoController }) {
     const router = Router();
 
     router.delete("/:codigo", PartePublicoController.deleteParte.bind(PartePublicoController));
-    router.post("/:tipo/:id/:imagen", app.use(fileUpload()), PartePublicoController.postArchivos.bind(PartePublicoController));
+    router.post("/:tipo/:id", app.use(fileUpload()), PartePublicoController.postArchivos.bind(PartePublicoController));
     router.post("/:tipo", PartePublicoController.postParte.bind(PartePublicoController));
     router.get("/codigo/:tippub/:codigo", PartePublicoController.get.bind(PartePublicoController));
     router.get("/termino/:tippub/:codigo", PartePublicoController.getAllWithTermino.bind(PartePublicoController));
