@@ -1,0 +1,5 @@
+Listening on pipe \\.\pipe\4901fca2-95c0-4087-abd6-e64e2e1dd8a9
+Base de datos mongo en el puerto: 27017 [36monline[0m
+Base de datos en el puerto: 1433 [36monline[0m
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba', 'SLFEAFIP.dll' ]
