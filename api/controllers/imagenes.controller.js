@@ -13,7 +13,7 @@ class ImagenesController extends Controller {
     async getImagenes(req, res) {
         const { tipo, parte, img, folder } = req.params;
         console.log(folder);
-        var pathImagen = path.resolve('../QA-NODE-N-LAYERS', `upload/${tipo}/${parte}/${folder}/${img}`);
+        var pathImagen = path.resolve('../PP-NODE-N-LAYERS', `upload/${tipo}/${parte}/${folder}/${img}`);
 
         if (folder === 'link') {
             if (fs.existsSync(pathImagen)) {
@@ -24,7 +24,7 @@ class ImagenesController extends Controller {
             if (fs.existsSync(pathImagen)) {
                 await res.sendFile(pathImagen);
             } else {
-                var pathNoImagen = path.resolve('../QA-NODE-N-LAYERS', 'assets/no-image.png');
+                var pathNoImagen = path.resolve('../PP-NODE-N-LAYERS', 'assets/no-image.png');
                 await res.sendFile(pathNoImagen);
             }
         }

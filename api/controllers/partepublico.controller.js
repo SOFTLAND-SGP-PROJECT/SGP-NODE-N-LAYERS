@@ -114,10 +114,15 @@ class PartePublicoController extends Controller {
         if (!req.files || Object.keys(req.files).length === 0) {
             return res.status(400).send('No hay archivos para subir.');
         }
+        console.log(tipo,id);
+        
         var path = this.crearFolder(tipo, id);
+        console.log(path);
+        
         for (let key of Object.keys(req.files)) {
             if (key.includes('imagen')) {
                 path = this.crearFolder(tipo, id + '/imagen/');
+                console.log(path);
 
                 this.moverArchivos(req.files[key], req.files[key].name, path);
             }
@@ -130,32 +135,6 @@ class PartePublicoController extends Controller {
                 this.moverArchivos(req.files[key], req.files[key].name, path);
             }
         }
-
-
-
-        // for (let key of Object.keys(req.files)) {
-        //     switch (key) {
-        //         case 'item0':
-        //             this.moverArchivos(req.files.item0, req.files.item0.name, tipo, path);
-        //             break;
-        //         case 'item1':
-        //             this.moverArchivos(req.files.item1, req.files.item1.name, tipo, path);
-        //             break;
-        //         case 'item2':
-        //             this.moverArchivos(req.files.item2, req.files.item2.name, tipo, path);
-        //             break;
-        //         case 'item3':
-        //             this.moverArchivos(req.files.item3, req.files.item3.name, tipo, path);
-        //             break;
-        //         case 'item4':
-        //             this.moverArchivos(req.files.item4, req.files.item4.name, tipo, path);
-        //             break;
-        //         case 'item5':
-        //             this.moverArchivos(req.files.item5, req.files.item5.name, tipo, path);
-        //             break;
-        //     }
-        // }
-
 
         return res.status(200).json({
             ok: true,
