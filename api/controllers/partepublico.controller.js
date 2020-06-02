@@ -125,6 +125,10 @@ class PartePublicoController extends Controller {
                 var path = this.crearFolder(tipo, id + '/link/');
                 this.moverArchivos(req.files[key], req.files[key].name, path);
             }
+            if (key.includes('video')) {
+                var path = this.crearFolder(tipo, id + '/video/');
+                this.moverArchivos(req.files[key], req.files[key].name, path);
+            }
         }
 
 
