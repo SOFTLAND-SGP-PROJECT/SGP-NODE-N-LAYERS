@@ -51,6 +51,8 @@ class PartePublicoController extends Controller {
     }
     async getAllWithSearchFilters(req, res) {
         const { tippub, modulo, objeto, version, termino, offset, limit } = req.params;
+        console.log(tippub, modulo, objeto, version, termino, offset, limit);
+
         const entities = await this._entityService.getAllWithSearchFilters(tippub, modulo, objeto, version, termino, offset, limit)
         jsonMapper(entities, this._entityMap)
             .then((data) => {
@@ -114,11 +116,11 @@ class PartePublicoController extends Controller {
         if (!req.files || Object.keys(req.files).length === 0) {
             return res.status(400).send('No hay archivos para subir.');
         }
-        console.log(tipo,id);
-        
+        console.log(tipo, id);
+
         var path = this.crearFolder(tipo, id);
         console.log(path);
-        
+
         for (let key of Object.keys(req.files)) {
             if (key.includes('imagen')) {
                 path = this.crearFolder(tipo, id + '/imagen/');

@@ -95,33 +95,39 @@ class PartePublicoRepository extends Repository {
     getAllWithSearchFilters(tippub, modulo, objeto, version, termino, offset, limit) {
         const Op = this._Op;
         const sequelize = this._Sequelize;
+
         var resultado = { partes: '', count: 0 }
-        modulo = (modulo == 'undefined' || modulo == 'null' ? "" : modulo)
-        objeto = (objeto == 'undefined' || objeto == 'null' ? "" : objeto)
-        version = (version == 'undefined' || version == 'null' ? "" : version)
-        termino = (termino == 'undefined' || termino == 'null' ? "" : termino)
+        modulo = (modulo === 'undefined' || modulo === 'null' ? "" : modulo);
+        objeto = (objeto === 'undefined' || objeto === 'null' ? "" : objeto);
+        version = (version === 'undefined' || version === 'null' ? "" : version);
+        termino = (termino === 'undefined' || termino === 'null' ? "" : termino);
+        console.log(tippub, modulo, objeto, version, termino, offset, limit);
         let whereStr = []
         let where = {
             USR_SPTERH_TIPPUB: tippub,
         }
-        if (version != "") {
+        console.log(version);
+
+        if (version !== "") {
             where = {
                 ...where,
                 USR_SPTERH_VRSION: version
             }
         }
-        if (modulo != "") {
+        if (modulo !== "") {
             where = {
                 ...where,
                 USR_SPTERH_MODULO: modulo
             }
         }
-        if (objeto != "") {
+        if (objeto !== "") {
             where = {
                 ...where,
                 USR_SPTERH_OBJETO: objeto
             }
         }
+        console.log(where);
+
         whereStr.push(where);
         whereStr.push({
             [Op.or]: [{
@@ -131,6 +137,11 @@ class PartePublicoRepository extends Repository {
                 },
                 {
                     USR_SPTERH_DESCRP: {
+                        [Op.like]: `%${termino}%`
+                    }
+                },
+                {
+                    USR_SPTERH_CODIGO: {
                         [Op.like]: `%${termino}%`
                     }
                 }

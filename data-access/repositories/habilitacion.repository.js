@@ -12,8 +12,9 @@ class HabilitacionRepository extends Repository {
     }
     postHabilitacion(nrocta, tiphab, noveda, direml, observ, phbpat, company, suc, data) {
         if (phbpat === 'null') phbpat = null;
-        console.log(company, suc, data);
-
+        if (nrocta === 'sac' || nrocta === 'softla') {
+            nrocta = company;
+        }
         return this._sequelize
             .query('EXEC SLSPWEB_RegistraLicencias :NROCTA, :TIPHAB, :NOVEDA, :DIREML, :OBSERV, :PHBPAT, :COMPANY, :SUCURS, :HABILITACION', {
                 replacements: { NROCTA: nrocta, TIPHAB: tiphab, NOVEDA: noveda, DIREML: direml, OBSERV: observ, PHBPAT: phbpat, COMPANY: company, SUCURS: suc, HABILITACION: data },

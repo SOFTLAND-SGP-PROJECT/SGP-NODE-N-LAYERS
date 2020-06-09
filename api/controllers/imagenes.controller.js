@@ -13,7 +13,9 @@ class ImagenesController extends Controller {
     async getImagenes(req, res) {
         const { tipo, parte, img, folder } = req.params;
         console.log(folder);
-        var pathImagen = path.resolve('../PP-NODE-N-LAYERS', `upload/${tipo}/${parte}/${folder}/${img}`);
+        var pathImagen = path.resolve('../QA-NODE-N-LAYERS', `upload/${tipo}/${parte}/${folder}/${img}`);
+        console.log(pathImagen);
+
 
         if (folder === 'link') {
             if (fs.existsSync(pathImagen)) {
