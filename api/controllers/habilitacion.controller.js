@@ -153,7 +153,7 @@ class HabilitacionController extends Controller {
                             return;
                     }
                 });
-                content.crearHabilitacion(req, res, nrocta, tipo, opcion, mail, motivo, null, company, suc, data);
+                content.crearHabilitacion(req, res, company, tipo, opcion, mail, motivo, null, company, suc, data);
             }
         });
     }
