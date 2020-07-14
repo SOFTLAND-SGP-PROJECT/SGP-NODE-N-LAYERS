@@ -14,6 +14,10 @@ module.exports = {
     ImpactoService: require("./impacto.service"),
     VotacionService: require("./votacion.service"),
     SecurityService: require("./security.service"),
+<<<<<<< HEAD
     ParametroService: require("./parametro.service"),
     LogService: require("./log.service")
+=======
+    ParametroService: require("./parametro.service")
+>>>>>>> Agregaron Link en la carga de parte publicos
 };

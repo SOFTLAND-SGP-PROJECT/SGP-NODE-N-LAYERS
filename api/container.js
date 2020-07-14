@@ -28,8 +28,12 @@ const {
 const {
     PerfilRepository,
     AsignadoRepository,
+<<<<<<< HEAD
     ParametroRepository,
     LogRepository
+=======
+    ParametroRepository
+>>>>>>> Agregaron Link en la carga de parte publicos
 } = require("../data-mongo-access/repositories");
 
 // business
@@ -54,8 +58,12 @@ const {
     ImpactoService,
     VotacionService,
     SecurityService,
+<<<<<<< HEAD
     ParametroService,
     LogService
+=======
+    ParametroService
+>>>>>>> Agregaron Link en la carga de parte publicos
 } = require("../services");
 
 // controllers
@@ -172,8 +180,12 @@ container
         VotacionRepository: asClass(VotacionRepository).singleton(),
         PerfilRepository: asClass(PerfilRepository).singleton(),
         AsignadoRepository: asClass(AsignadoRepository).singleton(),
+<<<<<<< HEAD
         ParametroRepository: asClass(ParametroRepository).singleton(),
         LogRepository: asClass(LogRepository).singleton()
+=======
+        ParametroRepository: asClass(ParametroRepository).singleton()
+>>>>>>> Agregaron Link en la carga de parte publicos
 
     })
     .register({
@@ -192,8 +204,12 @@ container
         OcurrenciaService: asClass(OcurrenciaService).singleton(),
         VotacionService: asClass(VotacionService).singleton(),
         SecurityService: asClass(SecurityService).singleton(),
+<<<<<<< HEAD
         ParametroService: asClass(ParametroService).singleton(),
         LogService: asClass(LogService).singleton()
+=======
+        ParametroService: asClass(ParametroService).singleton()
+>>>>>>> Agregaron Link en la carga de parte publicos
     })
     .register({
         Profile: asClass(Profile).singleton()
