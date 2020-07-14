@@ -1,0 +1,97 @@
+{
+    "tables": {
+        "CWOMOBJECTS": {
+            "tableName": "CWOMOBJECTS",
+            "indexes": []
+        },
+        "HBTAUI": {
+            "tableName": "HBTAUI",
+            "indexes": []
+        },
+        "HBTMOD": {
+            "tableName": "HBTMOD",
+            "indexes": []
+        },
+        "PMMTAI": {
+            "tableName": "PMMTAI",
+            "indexes": []
+        },
+        "SPCCBH": {
+            "tableName": "SPCCBH",
+            "indexes": []
+        },
+        "SPRMVH": {
+            "tableName": "SPRMVH",
+            "indexes": []
+        },
+        "SPRMVI": {
+            "tableName": "SPRMVI",
+            "indexes": []
+        },
+        "SPRMVP": {
+            "tableName": "SPRMVP",
+            "indexes": []
+        },
+        "SPTARH": {
+            "tableName": "SPTARH",
+            "indexes": []
+        },
+        "SPTARR": {
+            "tableName": "SPTARR",
+            "indexes": []
+        },
+        "SPTARV": {
+            "tableName": "SPTARV",
+            "indexes": []
+        },
+        "SPTCII": {
+            "tableName": "SPTCII",
+            "indexes": []
+        },
+        "SPTEST": {
+            "tableName": "SPTEST",
+            "indexes": []
+        },
+        "SPTTPS": {
+            "tableName": "SPTTPS",
+            "indexes": []
+        },
+        "USR_SPTERH": {
+            "tableName": "USR_SPTERH",
+            "indexes": []
+        },
+        "USR_SPTERI": {
+            "tableName": "USR_SPTERI",
+            "indexes": []
+        },
+        "USR_SPTIMH": {
+            "tableName": "USR_SPTIMH",
+            "indexes": []
+        },
+        "USR_SPTOCH": {
+            "tableName": "USR_SPTOCH",
+            "indexes": []
+        },
+        "USR_SPTVER": {
+            "tableName": "USR_SPTVER",
+            "indexes": []
+        },
+        "USR_SPWEBDOCU": {
+            "tableName": "USR_SPWEBDOCU",
+            "indexes": []
+        },
+        "USR_SPWEBNOVEDADES": {
+            "tableName": "USR_SPWEBNOVEDADES",
+            "indexes": []
+        },
+        "VTMCLC": {
+            "tableName": "VTMCLC",
+            "indexes": []
+        },
+        "VTMCLH": {
+            "tableName": "VTMCLH",
+            "indexes": []
+        }
+    },
+    "revision": 1
+}

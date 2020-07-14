@@ -1,0 +1,9 @@
+1) Crear tabla en models
+2) Crear archivo .repositorio
+3) Crear archivo .servicio
+4) Crear archivo .controller
+5) Agregar en index.js de las carpetas services, repositories, api
+6) Agregar en routes archivo .routes
+7) Agregar en controllers archivo .controller
+8) Agregar en index.js de carpetas routes y controllers
+9) Agregar repository, service, controller y routes en en container.js en todos lados

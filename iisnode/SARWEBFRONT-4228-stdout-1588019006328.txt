@@ -1,0 +1,433 @@
+Listening on pipe \\.\pipe\f25d96a9-6b0f-4ffa-b37a-993c34bfd84e
+Base de datos mongo en el puerto: 27017 [36monline[0m
+Base de datos en el puerto: 1433 [36monline[0m
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/wiltel/intercambio
+[]
+//Apollo/Global/Sistema de Gestion/uploads/PREMIU/intercambio
+[]
+e r
+e ru
+e run
+e runt
+e runti
+e runtim
+e runtime
+e 9
+//Apollo/Global/Sistema de Gestion/uploads/penta/intercambio
+[ 'CG_WR_CGRAJH.zip',
+  'CG_WR_CGRMVH.dll',
+  'CL - 27222',
+  'CL 22117',
+  'CL 22193',
+  'CL 24054',
+  'CL 27861 SIRCAR CORDOBA',
+  'CL-27292.zip',
+  'CL-27969.zip',
+  'Conexiones.txt',
+  'CONFIGURACIÓN IMPUESTOS.pptx',
+  'CONFIGURACIÓN IMPUESTOS.zip',
+  'FC_RR_FCRMVH_CL_23808.zip',
+  'Fecha de Pago',
+  'GR-1682.zip',
+  'grwgastos.zip',
+  'GSA_DOC_GU_Contabilidad_General.pdf',
+  'GSA_DOC_GU_Gestion_de_Repartos.pdf',
+  'GSA_DOC_GU_Gestion_Impositiva (1).pdf',
+  'GSA_DOC_GU_Liquidacion_Sueldos_Legales.pdf',
+  'GSA_DOC_GU_Sueldos_Jornales (1).pdf',
+  'Impresora Fiscal 4.3.3388.zip',
+  'KIDDE',
+  'PD_WR_PDRMVH.zip',
+  'SAR_CITI02.zip',
+  'SAR_SICORE',
+  'SAR_SICORE.mdb',
+  'SAR_SICORE.zip',
+  'SENASA',
+  'SetupSAR_4.4_SPTicket_DB-0000_SVNRev_3746.zip',
+  'SICORE CODIGO REGIMEN PENTA',
+  'SIRADIG.zip',
+  'SLFEAFIP',
+  'Thumbs.db' ]
+//Apollo/Global/Sistema de Gestion/uploads/penta/intercambio
+[ 'CG_WR_CGRAJH.zip',
+  'CG_WR_CGRMVH.dll',
+  'CL - 27222',
+  'CL 22117',
+  'CL 22193',
+  'CL 24054',
+  'CL 27861 SIRCAR CORDOBA',
+  'CL-27292.zip',
+  'CL-27969.zip',
+  'Conexiones.txt',
+  'CONFIGURACIÓN IMPUESTOS.pptx',
+  'CONFIGURACIÓN IMPUESTOS.zip',
+  'FC_RR_FCRMVH_CL_23808.zip',
+  'Fecha de Pago',
+  'GR-1682.zip',
+  'grwgastos.zip',
+  'GSA_DOC_GU_Contabilidad_General.pdf',
+  'GSA_DOC_GU_Gestion_de_Repartos.pdf',
+  'GSA_DOC_GU_Gestion_Impositiva (1).pdf',
+  'GSA_DOC_GU_Liquidacion_Sueldos_Legales.pdf',
+  'GSA_DOC_GU_Sueldos_Jornales (1).pdf',
+  'Impresora Fiscal 4.3.3388.zip',
+  'KIDDE',
+  'PD_WR_PDRMVH.zip',
+  'SAR_CITI02.zip',
+  'SAR_SICORE',
+  'SAR_SICORE.mdb',
+  'SAR_SICORE.zip',
+  'SENASA',
+  'SetupSAR_4.4_SPTicket_DB-0000_SVNRev_3746.zip',
+  'SICORE CODIGO REGIMEN PENTA',
+  'SIRADIG.zip',
+  'SLFEAFIP',
+  'Thumbs.db' ]
+[]
+//Apollo/Global/Sistema de Gestion/uploads/SBGSA/intercambio
+[ 'FC_MR_FCRMVH.dll.zip',
+  'MRR-101.mdb',
+  'Nuevo formato COT Sin sucursales.zip',
+  'PADRON ARCIBA CORREGIDO 10 2019.zip',
+  'setup.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/SBGSA/intercambio
+[ 'FC_MR_FCRMVH.dll.zip',
+  'MRR-101.mdb',
+  'Nuevo formato COT Sin sucursales.zip',
+  'PADRON ARCIBA CORREGIDO 10 2019.zip',
+  'setup.exe' ]
+[]
+//Apollo/Global/Sistema de Gestion/uploads/SBGSA/intercambio
+[ 'FC_MR_FCRMVH.dll.zip',
+  'MRR-101.mdb',
+  'Nuevo formato COT Sin sucursales.zip',
+  'PADRON ARCIBA CORREGIDO 10 2019.zip',
+  'setup.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/SBGSA/intercambio
+[ 'FC_MR_FCRMVH.dll.zip',
+  'MRR-101.mdb',
+  'Nuevo formato COT Sin sucursales.zip',
+  'PADRON ARCIBA CORREGIDO 10 2019.zip',
+  'setup.exe' ]
+//Apollo/Global/Sistema de Gestion/uploads/SBGSA/intercambio
+[ 'FC_MR_FCRMVH.dll.zip',
+  'MRR-101.mdb',
+  'Nuevo formato COT Sin sucursales.zip',
+  'PADRON ARCIBA CORREGIDO 10 2019.zip',
+  'setup.exe' ]
+body
+{ nrocta: 'OFISIS',
+  codfor: 'CL',
+  nrofor: '28139',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: 'Señores, gracias por su apoyo.',
+  adjunto: null,
+  valora: null }
+body
+OFISIS SP CL 28139 200 null null Señores, gracias por su apoyo. null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 28139,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 11,
+    FCHMOV: 2020-04-27T18:47:08.250Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/OFISIS/intercambio
+[ 'Capacitación.rar',
+  'CL25497.jpg',
+  'GRWNumeracion.dll',
+  'Maestros Clientes y Proveedores',
+  'Numeracion Correlativo',
+  'SetupOfisis_4.3.0.3605.exe',
+  'SetupOfisis_4.3.0.3641.exe',
+  'SetupOfisis_4.3.0.3665.exe',
+  'SetupOfisis_4.3.0.3671.exe',
+  'SetupOfisis_4.3.0.3678.exe',
+  'SetupOfisis_4.3.0.3688.exe',
+  'SetupOfisis_4.3_3575.exe',
+  'SPE_Numeracion_Correlativo.zip',
+  'SPE_Numeracion_Correlativo_v1.1.zip',
+  'SPE_Numeracion_Correlativo_v1.2.zip',
+  'Thumbs.db',
+  '__rzi_0.772' ]
+//Apollo/Global/Sistema de Gestion/uploads/Bivort/intercambio
+[ 'CL 25453.zip',
+  'GSA_DOC_GU_Administracion_de_Inventario.pdf',
+  'Manuales Factura Electronica y de Crédito.zip' ]
+body
+{ nrocta: 'Bivort',
+  codfor: 'CL',
+  nrofor: '28645',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+BIVORT SP CL 28645 200 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 28645,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 7,
+    FCHMOV: 2020-04-27T19:07:04.007Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/AKAPOL/intercambio
+[ 'Captura INTVAI CL 25973.PNG',
+  'CL 26955.zip',
+  'CL 28081.zip',
+  'Comprobantes asociados.zip',
+  'CON_ITEMS_CL_24230.zip',
+  'Factura Items.zip',
+  'Fecha de pago.zip',
+  'GR-1636 CARPETA TABLAS SIRE.zip',
+  'GR-1636.mdb',
+  'GRTTI.mdb',
+  'GRTTI.zip',
+  'GRWHabilitation.dll',
+  'ImagenSire.zip',
+  'Jobs CL 17362',
+  'RV_RR_RVRMVH.zip',
+  'SAR_F2005 ESPERO SEA EL ULTIMO.zip',
+  'SAR_F2005 SIRE.zip',
+  'SAR_F2005.mdb',
+  'SAR_F2005.zip',
+  'SIRE.zip',
+  'SR-550.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/Bivort/intercambio
+[ 'CL 25453.zip',
+  'GSA_DOC_GU_Administracion_de_Inventario.pdf',
+  'Manuales Factura Electronica y de Crédito.zip' ]
+//Apollo/Global/Sistema de Gestion/uploads/DRIPLA/intercambio
+[ 'CL 25387.zip',
+  'CL 26866.JPG',
+  'CL 26866.zip',
+  'CL-25167.rar',
+  'CL-27584.zip',
+  'DocCompleta.zip',
+  'Fecha de pago menor a setup 4.3.3388.zip',
+  'GG-42',
+  'interfaces cl 24670.zip' ]
+body
+{ nrocta: 'OFISIS',
+  codfor: 'CL',
+  nrofor: '28358',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: 'se resolvió con apoyo del area de desarrollo.',
+  adjunto: null,
+  valora: null }
+body
+OFISIS SP CL 28358 200 null null se resolvió con apoyo del area de desarrollo. null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 28358,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 10,
+    FCHMOV: 2020-04-27T19:22:39.650Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/OFISIS/intercambio
+[ 'Capacitación.rar',
+  'CL25497.jpg',
+  'GRWNumeracion.dll',
+  'Maestros Clientes y Proveedores',
+  'Numeracion Correlativo',
+  'SetupOfisis_4.3.0.3605.exe',
+  'SetupOfisis_4.3.0.3641.exe',
+  'SetupOfisis_4.3.0.3665.exe',
+  'SetupOfisis_4.3.0.3671.exe',
+  'SetupOfisis_4.3.0.3678.exe',
+  'SetupOfisis_4.3.0.3688.exe',
+  'SetupOfisis_4.3_3575.exe',
+  'SPE_Numeracion_Correlativo.zip',
+  'SPE_Numeracion_Correlativo_v1.1.zip',
+  'SPE_Numeracion_Correlativo_v1.2.zip',
+  'Thumbs.db',
+  '__rzi_0.772' ]
+body
+{ nrocta: 'OFISIS',
+  codfor: 'CL',
+  nrofor: '20825',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+OFISIS SP CL 20825 200 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 20825,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 9,
+    FCHMOV: 2020-04-27T19:28:21.777Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/OFISIS/intercambio
+[ 'Capacitación.rar',
+  'CL25497.jpg',
+  'GRWNumeracion.dll',
+  'Maestros Clientes y Proveedores',
+  'Numeracion Correlativo',
+  'SetupOfisis_4.3.0.3605.exe',
+  'SetupOfisis_4.3.0.3641.exe',
+  'SetupOfisis_4.3.0.3665.exe',
+  'SetupOfisis_4.3.0.3671.exe',
+  'SetupOfisis_4.3.0.3678.exe',
+  'SetupOfisis_4.3.0.3688.exe',
+  'SetupOfisis_4.3_3575.exe',
+  'SPE_Numeracion_Correlativo.zip',
+  'SPE_Numeracion_Correlativo_v1.1.zip',
+  'SPE_Numeracion_Correlativo_v1.2.zip',
+  'Thumbs.db',
+  '__rzi_0.772' ]
+body
+{ nrocta: 'OFISIS',
+  codfor: 'CL',
+  nrofor: '12647',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+OFISIS SP CL 12647 200 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 12647,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 9,
+    FCHMOV: 2020-04-27T19:46:12.410Z } ]
+body
+{ nrocta: 'OFISIS',
+  codfor: 'CL',
+  nrofor: '18552',
+  estnew: '200',
+  asgare: null,
+  asgres: null,
+  obscli: null,
+  adjunto: null,
+  valora: null }
+body
+OFISIS SP CL 18552 200 null null null null null
+[ { MODFOR: 'SP',
+    CODFOR: 'CL',
+    NROFOR: 18552,
+    PEDARE: 'VTA',
+    PEDRES: 'CL',
+    ESTACT: '005CLI',
+    ESTNEW: '200',
+    NROITM: 15,
+    FCHMOV: 2020-04-27T19:54:54.150Z } ]
+//Apollo/Global/Sistema de Gestion/uploads/PREMIU/intercambio
+[]
+2:  //Apollo/Global/Sistema de Gestion/uploads/PREMIU/1588027883583/PREMIU$ADM(NEW)
+PREMIU ADM 57DA424FA43E4DC084F85078F88C4235415171EB0EFBF965E78E17CCDA462E1C5B8C47CDB9BA86ED7A7570AD68C7408801BC65555991966061C514938340317F87E372BDEE8EA6070639CD0EEC132CDA5EF17D4FCF73ACC78ECAE645246A37571962F73C534171DB769EB6481A904DF338C3C8CDE30CCE2F661526137AEB21515E42AE3A9E93DCA6F1644AA65BB4CCE99F02015C6CD49DA7B3DDEEDA94DA6C896B02AF3E

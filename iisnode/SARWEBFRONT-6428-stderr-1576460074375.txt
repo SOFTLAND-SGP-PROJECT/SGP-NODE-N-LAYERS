@@ -1,0 +1,11 @@
+(node:6428) [DEP0005] DeprecationWarning: Buffer() is deprecated due to security and usability issues. Please use the Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+SyntaxError: Unexpected token 	 in JSON at position 890
+    at JSON.parse (<anonymous>)
+    at parse (C:\SGPWEB\SGP_NODE_BACKEND\node_modules\body-parser\lib\types\json.js:89:19)
+    at C:\SGPWEB\SGP_NODE_BACKEND\node_modules\body-parser\lib\read.js:121:18
+    at invokeCallback (C:\SGPWEB\SGP_NODE_BACKEND\node_modules\raw-body\index.js:224:16)
+    at done (C:\SGPWEB\SGP_NODE_BACKEND\node_modules\raw-body\index.js:213:7)
+    at IncomingMessage.onEnd (C:\SGPWEB\SGP_NODE_BACKEND\node_modules\raw-body\index.js:273:7)
+    at IncomingMessage.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1145:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
