@@ -75,9 +75,10 @@ class CursosController {
         await this._entityService.postCurso(codigo, curso)
             .then(data => {
                 console.log(data);
+                this._logService.postLog('C', 'Alta de curso', 'El curso no se pudo cargar', 'error de curso', 'admin');
+
                 // if ((data && data.length === 0) || !data) {
                 //     // console.log('El curso no se pudo cargar');
-                //     this._logService.postLog('C', 'Alta de curso', 'El curso no se pudo cargar', 'error de curso', 'admin');
                 //     return res.status(400).json({
                 //         ok: false,
                 //         message: 'El curso no se pudo cargar',
@@ -90,7 +91,7 @@ class CursosController {
             })
             .catch(error => {
                 this._logService.postLog('C', 'Alta de curso', error, 'error de conexión', 'admin');
-                // console.log(error);
+                console.log(error);
                 return res.status(500).json({
                     ok: false,
                     payload: error
@@ -148,6 +149,10 @@ class CursosController {
                 errors: { message: 'Debe de seleccionar un archivo' }
             });
         }
+        console.log('archivos');
+
+        console.log(codigo);
+        
         var path = this.crearFolder(codigo);
 
         for (let key of Object.keys(req.files)) {

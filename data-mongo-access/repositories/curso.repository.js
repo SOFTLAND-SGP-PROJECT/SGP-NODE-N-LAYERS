@@ -61,7 +61,7 @@ class CursoRepository {
             archivo: curso.archivo
         });
 
-        return await Curso.save((err, cursoGuardado) => {
+        return await curso.save((err, cursoGuardado) => {
             if (err) throw err;
             return cursoGuardado;
         });

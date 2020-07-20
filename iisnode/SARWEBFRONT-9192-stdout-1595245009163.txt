@@ -1,0 +1,466 @@
+Listening on pipe \\.\pipe\2b2e0d43-0d30-4e1f-a8c4-0dd8418e0a6c
+Base de datos mongo en el puerto: 27017 [36monline[0m
+Base de datos en el puerto: 1433 [36monline[0m
+//Apollo/Global/Sistema de Gestion/uploads/permaq/intercambio
+[ 'ARDJU008052020.txt',
+  'Error FC PV 7.PNG',
+  'PADRON ARCIBA 03 2020.zip',
+  'PADRON ARCIBA 04 2020.zip',
+  'PADRON CORREGIDO 06 2020.zip',
+  'PADRON CORREGIDO DE MAYO 2020 OK.zip' ]
+2020-07-20T11:46:59.232Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:46:59.308Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:46:59.347Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:46:59.369Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+LID21072020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\LID21072020\imagen\Taller_LibroIVADigital_Header.png
+//Apollo/Global/Sistema de Gestion/uploads/permaq/intercambio
+[ 'ARDJU008052020.txt',
+  'Error FC PV 7.PNG',
+  'PADRON ARCIBA 03 2020.zip',
+  'PADRON ARCIBA 04 2020.zip',
+  'PADRON CORREGIDO 06 2020.zip',
+  'PADRON CORREGIDO DE MAYO 2020 OK.zip' ]
+2020-07-20T11:47:37.864Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:47:37.907Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:47:37.935Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:47:37.958Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba' ]
+undefined
+archivos
+TCF18062020
+link
+imagen
+2020-07-20T11:53:50.059Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:53:50.089Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:53:50.121Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T11:53:50.143Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+LID21072020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\LID21072020\imagen\Taller_LibroIVADigital_Header.png
+TCF18062020
+entro
+[ { _id: 5f1585c46c255823e8dbcf11,
+    nombre: 'Taller cash flow',
+    cupo: 20,
+    codigo: 'TCF18062020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema: 'PROGRAMA',
+    temas:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-06-18T00:00:00.000Z,
+    imagen: 'imagen/Header2020_CashFlow.png',
+    archivo: 'link/softland-cursos-erp-taller-de-cash-flow.pdf',
+    __v: 0 } ]
+TCF18062020
+entro
+[ { _id: 5f1585c46c255823e8dbcf11,
+    nombre: 'Taller cash flow',
+    cupo: 20,
+    codigo: 'TCF18062020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema: 'PROGRAMA',
+    temas:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-06-18T00:00:00.000Z,
+    imagen: 'imagen/Header2020_CashFlow.png',
+    archivo: 'link/softland-cursos-erp-taller-de-cash-flow.pdf',
+    __v: 0 } ]
+TCF18062020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\TCF18062020\imagen\Header2020_CashFlow.png
+TCF18062020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\TCF18062020\link\softland-cursos-erp-taller-de-cash-flow.pdf
+sac
+{ descrip: 'FEDERICO LOPEZ FIGUEREDO',
+  email: 'flopez@softland.com.ar' }
+TCF18062020 FEDERICO LOPEZ FIGUEREDO flopez@softland.com.ar sac
+TCF18062020
+entro
+[ { _id: 5f1585c46c255823e8dbcf11,
+    nombre: 'Taller cash flow',
+    cupo: 20,
+    codigo: 'TCF18062020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema: 'PROGRAMA',
+    temas:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-06-18T00:00:00.000Z,
+    imagen: 'imagen/Header2020_CashFlow.png',
+    archivo: 'link/softland-cursos-erp-taller-de-cash-flow.pdf',
+    __v: 0 } ]
+TCF18062020
+entro
+[ { _id: 5f1585c46c255823e8dbcf11,
+    nombre: 'Taller cash flow',
+    cupo: 20,
+    codigo: 'TCF18062020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema: 'PROGRAMA',
+    temas:
+     [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-06-18T00:00:00.000Z,
+    imagen: 'imagen/Header2020_CashFlow.png',
+    archivo: 'link/softland-cursos-erp-taller-de-cash-flow.pdf',
+    __v: 0 } ]
+TCF18062020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\TCF18062020\imagen\Header2020_CashFlow.png
+//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
+[ 'CL 17299', 'Prueba' ]
+2020-07-20T16:26:23.952Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T16:26:23.998Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T16:26:24.030Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+2020-07-20T16:26:24.058Z
+[ { _id: 5f152d3bd8abdb21d889b0d5,
+    nombre: 'Taller Libro IVA Digital',
+    cupo: 30,
+    codigo: 'LID21072020',
+    horario: 'INFORMACIÓN GENERAL',
+    horarios: [ [Object], [Object] ],
+    costo: 'ARANCEL DEL CURSO',
+    costos: [ [Object], [Object] ],
+    leyenda:
+     'Consultá los beneficios por más de un asistente por empresa',
+    aviso:
+     'Recibirás la confirmación de la realización del taller en el transcurso de la semana previa',
+    tema:
+     'Durante el taller abordaremos los pasos que se deben realizar en Softland Logic para implementar el soporte magnético. Libro IVA Digital | RG 4597',
+    temas: [ [Object], [Object], [Object] ],
+    requisitos: [ [Object], [Object], [Object] ],
+    fecha: 2020-07-21T00:00:00.000Z,
+    imagen: 'imagen/Taller_LibroIVADigital_Header.png',
+    archivo: '',
+    __v: 0 } ]
+LID21072020
+C:\SGPWEB\PP-NODE-N-LAYERS\upload\curso\LID21072020\imagen\Taller_LibroIVADigital_Header.png
