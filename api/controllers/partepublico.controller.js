@@ -8,13 +8,8 @@ const { rutaPP } = require('../../config/config');
 
 class PartePublicoController extends Controller {
 
-<<<<<<< HEAD
     constructor({ PartePublicoService, ParametroService, LogService }) {
         super(PartePublicoService, Models.partepublico, LogService);
-=======
-    constructor({ PartePublicoService, ParametroService }) {
-        super(PartePublicoService, Models.partepublico);
->>>>>>> Agregaron Link en la carga de parte publicos
         this._entityMap = Models.partepublico;
         this._entityMapTermino = Models.partepublicoReducido;
     }
@@ -80,12 +75,8 @@ class PartePublicoController extends Controller {
     }
     async postParte(req, res) {
         var parte = req.body;
-<<<<<<< HEAD
         const { usuario } = req.params;
         const tipo = parte.USR_SPTERH_TIPPUB;
-=======
-        console.log(parte);
->>>>>>> Agregaron Link en la carga de parte publicos
 
         await this._entityService.postParte(parte)
             .then((parte) => {
@@ -105,12 +96,7 @@ class PartePublicoController extends Controller {
                 });
             })
             .catch(error => {
-<<<<<<< HEAD
                 this._logService.postLog(tipo, 'Subida de parte publico', error, 'error de conexión', usuario);
-=======
-
-                console.log(error);
->>>>>>> Agregaron Link en la carga de parte publicos
 
                 return res.status(500).json({
                     ok: false,
@@ -119,14 +105,9 @@ class PartePublicoController extends Controller {
             });
     }
     async postArchivos(req, res) {
-<<<<<<< HEAD
         var { tipo, id, usuario } = req.params;
         if (!req.files || Object.keys(req.files).length === 0) {
             this._logService.postLog(tipo, 'Subida de archivos publico', 'No selecciono ningun archivo', 'sin archivo', usuario);
-=======
-        var { tipo, id } = req.params;
-        if (!req.files) {
->>>>>>> Agregaron Link en la carga de parte publicos
             return res.status(400).json({
                 ok: false,
                 mensaje: 'No selecciono nada',
@@ -137,7 +118,6 @@ class PartePublicoController extends Controller {
         for (let key of Object.keys(req.files)) {
             if (key.includes('imagen')) {
                 path = this.crearFolder(tipo, id + '/imagen/');
-<<<<<<< HEAD
                 this.moverArchivos(tipo, req.files[key], req.files[key].name, path);
             }
             if (key.includes('link')) {
@@ -150,47 +130,6 @@ class PartePublicoController extends Controller {
             }
         }
 
-=======
-
-                this.moverArchivos(req.files[key], req.files[key].name, path);
-            }
-            if (key.includes('link')) {
-                var path = this.crearFolder(tipo, id + '/link/');
-                this.moverArchivos(req.files[key], req.files[key].name, path);
-            }
-            if (key.includes('video')) {
-                var path = this.crearFolder(tipo, id + '/video/');
-                this.moverArchivos(req.files[key], req.files[key].name, path);
-            }
-        }
-
-
-
-        // for (let key of Object.keys(req.files)) {
-        //     switch (key) {
-        //         case 'item0':
-        //             this.moverArchivos(req.files.item0, req.files.item0.name, tipo, path);
-        //             break;
-        //         case 'item1':
-        //             this.moverArchivos(req.files.item1, req.files.item1.name, tipo, path);
-        //             break;
-        //         case 'item2':
-        //             this.moverArchivos(req.files.item2, req.files.item2.name, tipo, path);
-        //             break;
-        //         case 'item3':
-        //             this.moverArchivos(req.files.item3, req.files.item3.name, tipo, path);
-        //             break;
-        //         case 'item4':
-        //             this.moverArchivos(req.files.item4, req.files.item4.name, tipo, path);
-        //             break;
-        //         case 'item5':
-        //             this.moverArchivos(req.files.item5, req.files.item5.name, tipo, path);
-        //             break;
-        //     }
-        // }
-
-
->>>>>>> Agregaron Link en la carga de parte publicos
         return res.status(200).json({
             ok: true,
             payload: 'Peticion realizada correctamente'
@@ -213,16 +152,10 @@ class PartePublicoController extends Controller {
         const entities = await this._entityService.deleteParte(codigo)
             .then((resp) => {
                 if (!resp) {
-<<<<<<< HEAD
                     this._logService.postLog(codigo, 'Borrar parte publico', 'El parte no se pudo borrar', 'error borrando parte', usuario);
                     return res.status(400).json({
                         ok: false,
                         message: 'El parte no se pudo borrar',
-=======
-                    return res.status(400).json({
-                        ok: false,
-                        message: 'El parte no se pudo cargar',
->>>>>>> Agregaron Link en la carga de parte publicos
                     });
                 }
                 return res.status(200).json({
@@ -231,7 +164,6 @@ class PartePublicoController extends Controller {
                 });
             })
             .catch(error => {
-<<<<<<< HEAD
                 this._logService.postLog(codigo, 'Borrar parte publico', error, 'error de conexión borrando parte', usuario);
 
                 return res.status(500).json({
@@ -248,18 +180,6 @@ class PartePublicoController extends Controller {
 
     //Funciones auxiliares
     moverArchivos(tipo, file, filename, folder) {
-=======
-                return res.status(500).json({
-                    ok: false,
-                    payload: error
-                });
-            });
-
-    }
-
-    //Funciones auxiliares
-    moverArchivos(file, filename, folder) {
->>>>>>> Agregaron Link en la carga de parte publicos
         var path = `${folder}${filename}`;
         file.mv(path, function(err, res) {
             if (err) {
