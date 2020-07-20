@@ -22,11 +22,10 @@ class ImagenesController extends Controller {
                 await res.download(pathImagen, `${img}`);
             }
         } else {
-            // var pathImagen = path.resolve('C:/SGPWEB/SGP-NODE-N-LAYERS/', `upload/${tipo}/${parte}/${folder}/${img}`);
             if (fs.existsSync(pathImagen)) {
                 await res.sendFile(pathImagen);
             } else {
-                var pathNoImagen = path.resolve('../PP-NODE-N-LAYERS', 'assets/no-image.png');
+                var pathNoImagen = path.resolve(`${rutaA}`, 'no-image.png');
                 await res.sendFile(pathNoImagen);
             }
         }
