@@ -34,7 +34,6 @@ class ContactoRepository extends Repository {
         const Op = this._Op;
         return this._db[this.entity]
             .findAll({
-                limit: 50,
                 where: {
                     [Op.and]: [
                         { VTMCLC_NROCTA: nrocta },
