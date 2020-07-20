@@ -5,5 +5,6 @@ module.exports = function({ ImagenesController }) {
     const router = Router();
 
     router.get("/:tipo/:parte/:folder/:img", ImagenesController.getImagenes.bind(ImagenesController));
+    router.get("/:codigo/:tipo/:img", ImagenesController.getImagenesCursos.bind(ImagenesController));
     return router;
 };
