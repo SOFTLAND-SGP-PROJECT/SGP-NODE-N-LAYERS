@@ -1,8 +1,8 @@
 const { asClass, asFunction, createContainer, asValue } = require("awilix");
 
 //db
-const db = require('../data-access/models');
-
+const db = require('../data-access/models')[0];
+const dbSM = require('../data-access/models')[1];
 //base de datos mongodb
 const mongodb = require('../data-mongo-access/models');
 
@@ -21,7 +21,8 @@ const {
     DocumentoRepository,
     OcurrenciaRepository,
     ImpactoRepository,
-    VotacionRepository
+    VotacionRepository,
+    CursoRepository
 } = require("../data-access/repositories");
 
 // mongo repositories
@@ -30,7 +31,6 @@ const {
     AsignadoRepository,
     ParametroRepository,
     LogRepository,
-    CursoRepository,
     InscriptoRepository
 } = require("../data-mongo-access/repositories");
 
@@ -184,7 +184,6 @@ container
         LogRepository: asClass(LogRepository).singleton(),
         CursoRepository: asClass(CursoRepository).singleton(),
         InscriptoRepository: asClass(InscriptoRepository).singleton()
-
     })
     .register({
         ModuloService: asClass(ModuloService).singleton(),
@@ -213,7 +212,8 @@ container
         config: asValue(config)
     })
     .register({
-        db: asValue(db)
+        db: asValue(db),
+        dbSM: asValue(dbSM)
     })
     .register({
         mongodb: asValue(mongodb)

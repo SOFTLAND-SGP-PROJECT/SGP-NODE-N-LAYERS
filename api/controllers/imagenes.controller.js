@@ -6,8 +6,9 @@ const fs = require('fs');
 
 class ImagenesController extends Controller {
 
-    constructor() {
+    constructor({ CursoService }) {
         super(Models.partepublico);
+        this._entityService = CursoService;
     }
 
     async getImagenes(req, res) {
@@ -32,26 +33,18 @@ class ImagenesController extends Controller {
 
     }
     async getImagenesCursos(req, res) {
-        const { tipo, img, codigo } = req.params;
-        console.log(codigo);
-        var pathImagen = path.resolve(`${rutaPP}`, `curso/${codigo}/${tipo}/${img}`);
-        console.log(pathImagen);
+        const { codigo, tipo } = req.params;
+        await this._entityService.getCursoPorCodigo(codigo)
+            .then((data) => {
+                if (data.length > 0) {
+                    if (tipo === 'img') {
+                        return res.sendFile(data[0].GPTDPH_BMPBMP);
+                    } else if (tipo === 'link') {
+                        return res.download(data[0].GPTDPH_OLEOLE);
+                    }
 
-
-        if (tipo === 'link') {
-            if (fs.existsSync(pathImagen)) {
-                await res.download(pathImagen, `${img}`);
-            }
-        } else {
-            if (fs.existsSync(pathImagen)) {
-                await res.sendFile(pathImagen);
-            } else {
-                console.log(rutaA);
-                var pathNoImagen = path.resolve(`${rutaA}`, 'no-image.png');
-                await res.sendFile(pathNoImagen);
-            }
-        }
-
+                }
+            });
     }
 
 

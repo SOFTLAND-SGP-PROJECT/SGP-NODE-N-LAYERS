@@ -6,8 +6,8 @@ class CursoService {
     }
 
     // servicios cursos
-    async postCurso(codigo, curso) {
-        return await this._CursoRepository.postCurso(codigo, curso);
+    async postCurso(codigo, asistente) {
+        return await this._CursoRepository.postCurso(codigo, asistente);
     }
     async getCursos() {
         return await this._CursoRepository.getCursos();
@@ -15,8 +15,8 @@ class CursoService {
     async getProximoCursos() {
         return await this._CursoRepository.getProximoCursos();
     }
-    async putRegistrar(codigo, contacto, email, nrocta) {
-        return await this._InscriptoRepository.putRegistrar(codigo, contacto, email, nrocta);
+    async putRegistrar(codigo, contacto, email, nrocta, fecha) {
+        return await this._InscriptoRepository.putRegistrar(codigo, contacto, email, nrocta, fecha);
     }
     async getCursoPorCodigo(codigo) {
         return await this._CursoRepository.getCursoPorCodigo(codigo);
@@ -26,6 +26,21 @@ class CursoService {
     }
     async getInscriptoPorNrocta(codigo, nrocta) {
         return await this._InscriptoRepository.getInscriptoPorNrocta(codigo, nrocta);
+    }
+    async getCursosInscriptos(codigo) {
+        return await this._CursoRepository.getCursosInscriptos(codigo);
+    }
+    async getLogros(nrocta) {
+        return await this._CursoRepository.getLogros(nrocta);
+    }
+    async getCursosPendientes(nrocta) {
+        return await this._CursoRepository.getCursosPendientes(nrocta);
+    }
+    async getAsistentesPorCurso(codpro, nrocta) {
+        return await this._CursoRepository.getAsistentesPorCurso(codpro, nrocta);
+    }
+    async deleteAsistentePorCurso(codigo, asistente) {
+        return await this._CursoRepository.deleteAsistentePorCurso(codigo, asistente);
     }
 }
 

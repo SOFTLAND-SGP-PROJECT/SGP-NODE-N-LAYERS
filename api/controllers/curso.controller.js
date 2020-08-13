@@ -3,6 +3,7 @@
 const path = require('path');
 const { rutaPP } = require('../../config/config');
 const fs = require('fs');
+const { log } = require('console');
 
 class CursosController {
 
@@ -11,11 +12,9 @@ class CursosController {
         this._logService = LogService;
     }
 
+    // Method http GET
     async getCurso(req, res) {
-        // const { tippub, codigo } = req.params;
-
-        const entities = await this._entityService.getCursos()
-            // jsonMapper(entities, this._entityMap)
+        var entities = await this._entityService.getCursos()
             .then((data) => {
                 return res.status(200).json({
                     ok: true,
@@ -24,20 +23,19 @@ class CursosController {
             });
     }
     async getInscriptoPorNrocta(req, res) {
-        const { codigo, nrocta } = req.params;
-        const entities = await this._entityService.getInscriptoPorNrocta(codigo, nrocta)
-            // jsonMapper(entities, this._entityMap)
+        var { codigo, nrocta } = req.params;
+        var entities = await this._entityService.getInscriptoPorNrocta(codigo, nrocta)
             .then((data) => {
                 return res.status(200).json({
                     ok: true,
                     payload: data
                 });
             });
-
     }
     async getProximoCursos(req, res) {
         await this._entityService.getProximoCursos()
             .then((data) => {
+                console.log(data);
                 return res.status(200).json({
                     ok: true,
                     payload: data
@@ -68,44 +66,132 @@ class CursosController {
                 });
             });
     }
-
-    async postCurso(req, res) {
-        var curso = req.body;
-        const { codigo } = req.params;
-        await this._entityService.postCurso(codigo, curso)
-            .then(data => {
+    async getCursosInscriptos(req, res) {
+        var { codigo } = req.params;
+        await this._entityService.getCursosInscriptos(codigo)
+            .then((data) => {
+                console.log('entro');
                 console.log(data);
-                // if ((data && data.length === 0) || !data) {
-                //     // console.log('El curso no se pudo cargar');
-                //     this._logService.postLog('C', 'Alta de curso', 'El curso no se pudo cargar', 'error de curso', 'admin');
-                //     return res.status(400).json({
-                //         ok: false,
-                //         message: 'El curso no se pudo cargar',
-                //     });
-                // }
-                return res.status(201).json({
+                return res.status(200).json({
                     ok: true,
-                    payload: `Curso ${codigo} fue cargado con Exito`
+                    payload: data
                 });
             })
             .catch(error => {
-                this._logService.postLog('C', 'Alta de curso', error, 'error de conexión', 'admin');
-                // console.log(error);
                 return res.status(500).json({
                     ok: false,
                     payload: error
                 });
             });
     }
-    async deleteRegistro(req, res) {
-        const { codigo, nrocta, email } = req.params;
-        console.log(codigo, nrocta, email);
+    async getLogros(req, res) {
+        var { nrocta } = req.params;
+        await this._entityService.getLogros(nrocta)
+            .then(data => {
+                return res.status(200).json({
+                    ok: true,
+                    payload: data
+                });
+            })
+            .catch(error => {
+                return res.status(500).json({
+                    ok: false,
+                    payload: error
+                });
+            });
+    }
+    async getCursosPendientes(req, res) {
+        var { nrocta } = req.params;
+        await this._entityService.getCursosPendientes(nrocta)
+            .then(data => {
+                return res.status(200).json({
+                    ok: true,
+                    payload: data
+                });
+            })
+            .catch(error => {
+                return res.status(500).json({
+                    ok: false,
+                    payload: error
+                });
+            });
+    }
+    async getAsistentesPorCurso(req, res) {
+        var { codpro, nrocta } = req.params;
+        await this._entityService.getAsistentesPorCurso(codpro, nrocta)
+            .then(data => {
+                return res.status(200).json({
+                    ok: true,
+                    payload: data
+                });
+            })
+            .catch(error => {
+                return res.status(500).json({
+                    ok: false,
+                    payload: error
+                });
+            });
+    }
 
-        await this._entityService.deleteRegistro(codigo, nrocta, email)
+    // Method http POST
+    async postCurso(req, res) {
+            var asistente = req.body;
+            const { codigo } = req.params;
+            await this._entityService.postCurso(codigo, asistente)
+                .then(data => {
+                    return res.status(201).json({
+                        ok: true,
+                        payload: `Curso ${codigo} fue cargado con Exito`
+                    });
+                })
+                .catch(error => {
+                    this._logService.postLog('C', 'Alta de curso', error, 'error de conexión', 'admin');
+                    console.log(error);
+                    return res.status(500).json({
+                        ok: false,
+                        payload: error
+                    });
+                });
+        }
+        // async postArchivos(req, res) {
+        //     var { codigo } = req.params;
+        //     if (!req.files || Object.keys(req.files).length === 0) {
+        //         return res.status(400).json({
+        //             ok: false,
+        //             mensaje: 'No selecciono nada',
+        //             errors: { message: 'Debe de seleccionar un archivo' }
+        //         });
+        //     }
+        //     var path = this.crearFolder(codigo);
+        //     for (let key of Object.keys(req.files)) {
+        //         console.log(key);
+        //         if (key.includes('imagen')) {
+        //             path = this.crearFolder(codigo + '/imagen/');
+        //             this.moverArchivos(req.files[key], req.files[key].name, path);
+        //         }
+        //         if (key.includes('link')) {
+        //             var path = this.crearFolder(codigo + '/link/');
+        //             this.moverArchivos(req.files[key], req.files[key].name, path);
+        //         }
+        //     }
+        //     return res.status(200).json({
+        //         ok: true,
+        //         payload: 'Peticion realizada correctamente'
+        //     });
+        // }
+
+    // Method http DELETE 
+    async deleteAsistentePorCurso(req, res) {
+        var { codigo } = req.params;
+        const asistente = req.body;
+        console.log(codigo);
+        console.log(asistente);
+
+        await this._entityService.deleteAsistentePorCurso(codigo, asistente)
             .then(data => {
                 return res.status(201).json({
                     ok: true,
-                    payload: `el ${email} fue borrado con Exito`
+                    payload: `el ${codigo} fue borrado con Exito`
                 });
             })
             .catch(error => {
@@ -117,13 +203,14 @@ class CursosController {
             });
     }
 
+    // Method http PUT 
     async putRegistrar(req, res) {
         var contacto = req.body;
-        const { codigo, nrocta } = req.params;
+        var { codigo, nrocta } = req.params;
         console.log(nrocta);
 
         console.log(contacto);
-        await this._entityService.putRegistrar(codigo, contacto.descrip, contacto.email, nrocta)
+        await this._entityService.putRegistrar(codigo, contacto.descrip, contacto.email, nrocta, contacto.fecha)
             .then(data => {
                 return res.status(201).json({
                     ok: true,
@@ -138,35 +225,8 @@ class CursosController {
                 });
             });
     }
-    async postArchivos(req, res) {
-        var { codigo } = req.params;
-        if (!req.files || Object.keys(req.files).length === 0) {
-            // this._logService.postLog(tipo, 'Subida de archivos publico', 'No selecciono ningun archivo', 'sin archivo', usuario);
-            return res.status(400).json({
-                ok: false,
-                mensaje: 'No selecciono nada',
-                errors: { message: 'Debe de seleccionar un archivo' }
-            });
-        }
-        var path = this.crearFolder(codigo);
 
-        for (let key of Object.keys(req.files)) {
-            console.log(key);
-            if (key.includes('imagen')) {
-                path = this.crearFolder(codigo + '/imagen/');
-                this.moverArchivos(req.files[key], req.files[key].name, path);
-            }
-            if (key.includes('link')) {
-                var path = this.crearFolder(codigo + '/link/');
-                this.moverArchivos(req.files[key], req.files[key].name, path);
-            }
-        }
-
-        return res.status(200).json({
-            ok: true,
-            payload: 'Peticion realizada correctamente'
-        });
-    }
+    //Funciones auxiliares
     crearFolder(folderName) {
         var dirPath = `${rutaPP}/curso/${folderName}`;
         if (!fs.existsSync(dirPath)) {
@@ -179,8 +239,6 @@ class CursosController {
         }
         return dirPath;
     }
-
-    //Funciones auxiliares
     moverArchivos(file, filename, folder) {
         var path = `${folder}${filename}`;
         file.mv(path, function(err, res) {
