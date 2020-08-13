@@ -12,5 +12,6 @@ module.exports = {
     DocumentoRepository: require("./documento.repository"),
     OcurrenciaRepository: require("./ocurrencia.repository"),
     ImpactoRepository: require("./impacto.repository"),
-    VotacionRepository: require("./votacion.repository")
+    VotacionRepository: require("./votacion.repository"),
+    CursoRepository: require("./curso.repository")
 };

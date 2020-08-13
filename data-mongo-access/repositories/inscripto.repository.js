@@ -32,13 +32,14 @@ class InscriptoRepository {
                     .catch((err) => { throw err; });
             });
     }
-    async putRegistrar(codigo, contacto, email, nrocta) {
-        console.log(codigo, contacto, email, nrocta);
+    async putRegistrar(codigo, contacto, email, nrocta, fecha) {
+        console.log(codigo, contacto, email, nrocta, fecha);
         var inscripto = new Inscripto({
             codigo: codigo,
             nrocta: nrocta,
             contacto: contacto,
             email: email,
+            fecha: fecha,
             debaja: 'N'
         });
         return await inscripto.save((err, inscriptoGuardado) => {
