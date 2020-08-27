@@ -16,5 +16,6 @@ module.exports = {
     SecurityService: require("./security.service"),
     ParametroService: require("./parametro.service"),
     LogService: require("./log.service"),
-    CursoService: require("./curso.service")
+    CursoService: require("./curso.service"),
+    EncuestaService: require("./encuesta.service")
 };

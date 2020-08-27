@@ -19,5 +19,6 @@ module.exports = {
     ImagenPerfilController: require("./imagenPerfil.controller"),
     LoginController: require("./login.controller"),
     ParametroController: require("./parametro.controller"),
-    CursoController: require("./curso.controller")
+    CursoController: require("./curso.controller"),
+    EncuestaController: require("./encuesta.controller")
 };

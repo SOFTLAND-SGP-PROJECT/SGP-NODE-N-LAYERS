@@ -41,6 +41,15 @@ class ImagenesController extends Controller {
                         return res.sendFile(data[0].GPTDPH_BMPBMP);
                     } else if (tipo === 'link') {
                         return res.download(data[0].GPTDPH_OLEOLE);
+                    } else if (tipo === 'imgweb') {
+                        console.log(data[0].USR_GPTDPH_BMPWEB);
+                        if (data[0].USR_GPTDPH_BMPWEB) {
+                            return res.sendFile(data[0].USR_GPTDPH_BMPWEB);
+                        } else {
+                            var pathNoImagen = path.resolve(`${rutaA}`, 'no-image.png');
+                            return res.sendFile(pathNoImagen);
+                        }
+
                     }
 
                 }

@@ -30,7 +30,8 @@ module.exports = function({
     ImagenPerfilRoutes,
     LoginRoutes,
     ParametroRoutes,
-    CursoRoutes
+    CursoRoutes,
+    EncuestaRoutes
 }) {
 
     const router = express.Router();
@@ -102,7 +103,7 @@ module.exports = function({
     apiRoute.use("/perfil", ImagenPerfilRoutes);
     apiRoute.use("/parametro", ParametroRoutes);
     apiRoute.use("/curso", CursoRoutes);
-
+    apiRoute.use("/encuesta", EncuestaRoutes);
     router.use("/", apiRoute);
     return router;
 };
