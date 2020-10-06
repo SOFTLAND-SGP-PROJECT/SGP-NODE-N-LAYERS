@@ -20,7 +20,7 @@ class ModuloRepository extends Repository {
             });
     }
     getNovedades() {
-        const Op = this._Op;
+        // const Op = this._Op;
         return this._db[this.entityNovedades]
             .findAll({
                 where: { HBTMOD_ESNOVE: 'S' },

@@ -1,6 +1,6 @@
 const Repository = require("./repository");
-const path = require('path');
-const fs = require('fs');
+// const path = require('path');
+// const fs = require('fs');
 class ParteRepository extends Repository {
     constructor({ db }) {
         super(db, "SPRMVH", {
@@ -36,7 +36,7 @@ class ParteRepository extends Repository {
             });
     }
     putCambioEstado(nrocta, codfor, nrofor, estnew, asgare, asgres, obscli, adjunt, valora) {
-        console.log(nrocta.toUpperCase(), 'SP', codfor, parseInt(nrofor), estnew, asgare, asgres, obscli, adjunt, valora);
+        // console.log(nrocta.toUpperCase(), 'SP', codfor, parseInt(nrofor), estnew, asgare, asgres, obscli, adjunt, valora);
 
         return this._sequelize
             .query('EXEC SLSPWEB_CambioEstado :NROCTA, :MODFOR, :CODFOR, :NROFOR, :ESTNEW, :ASGARE, :ASGRES, :OBSCLI, :ADJUNT, :VALORA', {
@@ -55,7 +55,7 @@ class ParteRepository extends Repository {
     }
     getPartesRelacionados(nrocta, modulo, fechaDesde, fechaHasta, info, numero) {
         const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const sequelize = this._Sequelize;
         var filtro = [];
         modulo = modulo == 'null' ? '' : modulo;
         modulo = (modulo == undefined) ? '' : modulo;

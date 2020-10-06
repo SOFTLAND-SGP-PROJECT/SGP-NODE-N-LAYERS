@@ -10,5 +10,7 @@ module.exports = {
     ocurrencia: require("./ocurrencia.model"),
     parterelacionado: require("./parte.model"),
     votacion: require("./votacion.model"),
-    habilitacion: require("./habilitacion.model")
-}
+    habilitacn: require("./habilitacion.model"),
+    member: require("./member.model"),
+    usuarioSGP: require("./usuarioSGP.model")
+};

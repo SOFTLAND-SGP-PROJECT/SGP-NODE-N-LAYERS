@@ -22,7 +22,6 @@ class CursoRepository {
             console.log(inscripciones[0]);
             return [];
         });
-
     }
     async postCurso(codigo, asistente) {
         return await this._sequelize

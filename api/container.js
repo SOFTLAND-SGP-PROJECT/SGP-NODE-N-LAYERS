@@ -3,6 +3,7 @@ const { asClass, asFunction, createContainer, asValue } = require("awilix");
 //db
 const db = require('../data-access/models')[0];
 const dbSM = require('../data-access/models')[1];
+
 //base de datos mongodb
 const mongodb = require('../data-mongo-access/models');
 
@@ -15,7 +16,7 @@ const {
     VersionRepository,
     ContactoRepository,
     PartePublicoRepository,
-    UsuarioRepository,
+    ClienteRepository,
     HabilitacionRepository,
     NovedadRepository,
     DocumentoRepository,
@@ -23,21 +24,29 @@ const {
     ImpactoRepository,
     VotacionRepository,
     CursoRepository,
-    EncuestaRepository
+    EncuestaRepository,
+    UsuarioRepository,
+    UsuariosRepository,
+    MenuRepository,
+    PerfilRepository,
+    ObjetoPerfilRepository,
+    PerfilAsignadoRepository
 } = require("../data-access/repositories");
 
 // mongo repositories
 const {
-    PerfilRepository,
-    AsignadoRepository,
     ParametroRepository,
     LogRepository,
-    InscriptoRepository
+    InscriptoRepository,
+    EmailEditorRepository
 } = require("../data-mongo-access/repositories");
 
 // business
 const {
-    Profile
+    Profile,
+    Job,
+    Login,
+    Menu
 } = require("../business");
 
 // services
@@ -49,18 +58,21 @@ const {
     VersionService,
     ContactoService,
     PartePublicoService,
-    UsuarioService,
+    ClienteService,
     HabilitacionService,
     NovedadService,
     DocumentoService,
     OcurrenciaService,
     ImpactoService,
     VotacionService,
-    SecurityService,
     ParametroService,
     LogService,
     CursoService,
-    EncuestaService
+    EncuestaService,
+    EmailEditorService,
+    LoginService,
+    MenuService,
+    ProfileService
 } = require("../services");
 
 // controllers
@@ -72,7 +84,7 @@ const {
     VersionController,
     ContactoController,
     PartePublicoController,
-    UsuarioController,
+    ClienteController,
     HabilitacionController,
     NovedadController,
     DocumentoController,
@@ -86,7 +98,11 @@ const {
     LoginController,
     ParametroController,
     CursoController,
-    EncuestaController
+    EncuestaController,
+    LoginNewController,
+    EmailEditorController,
+    JobController,
+    MenuController
 } = require("../api/controllers");
 
 //Routes
@@ -98,7 +114,7 @@ const SptestRoutes = require("../api/routes/sptest.routes");
 const VersionRoutes = require("../api/routes/version.routes");
 const ContactoRoutes = require("../api/routes/contacto.routes");
 const PartePublicoRoutes = require("../api/routes/partepublico.routes");
-const UsuarioRoutes = require("../api/routes/usuario.routes");
+const ClienteRoutes = require("./routes/cliente.routes");
 const HabilitacionRoutes = require("../api/routes/habilitacion.routes");
 const NovedadRoutes = require("../api/routes/novedad.routes");
 const DocumentoRoutes = require("../api/routes/documento.routes")
@@ -113,6 +129,10 @@ const LoginRoutes = require("../api/routes/login.routes");
 const ParametroRoutes = require("../api/routes/parametro.routes");
 const CursoRoutes = require("../api/routes/curso.routes");
 const EncuestaRoutes = require("../api/routes/encuesta.routes");
+const LoginNewRoutes = require("../api/routes/login-new.routes");
+const EmailEditorRoutes = require("../api/routes/emailEditor.routes");
+const JobRoutes = require("../api/routes/job.routes");
+const MenuRoutes = require("../api/routes/menu.routes");
 
 //App
 const Server = require("./server");
@@ -131,8 +151,8 @@ container
         ObjetoRoutes: asFunction(ObjetoRoutes).singleton(),
         ContactoController: asClass(ContactoController).singleton(),
         ContactoRoutes: asFunction(ContactoRoutes).singleton(),
-        UsuarioController: asClass(UsuarioController).singleton(),
-        UsuarioRoutes: asClass(UsuarioRoutes).singleton(),
+        ClienteController: asClass(ClienteController).singleton(),
+        ClienteRoutes: asClass(ClienteRoutes).singleton(),
         HabilitacionController: asClass(HabilitacionController).singleton(),
         HabilitacionRoutes: asClass(HabilitacionRoutes).singleton(),
         NovedadController: asClass(NovedadController).singleton(),
@@ -166,7 +186,16 @@ container
         CursoRoutes: asFunction(CursoRoutes).singleton(),
         CursoController: asClass(CursoController).singleton(),
         EncuestaController: asClass(EncuestaController).singleton(),
-        EncuestaRoutes: asFunction(EncuestaRoutes).singleton()
+        EncuestaRoutes: asFunction(EncuestaRoutes).singleton(),
+        LoginNewController: asClass(LoginNewController).singleton(),
+        LoginNewRoutes: asFunction(LoginNewRoutes).singleton(),
+        EmailEditorController: asClass(EmailEditorController).singleton(),
+        EmailEditorRoutes: asFunction(EmailEditorRoutes).singleton(),
+        JobRoutes: asFunction(JobRoutes).singleton(),
+        JobController: asClass(JobController).singleton(),
+        MenuRoutes: asFunction(MenuRoutes).singleton(),
+        MenuController: asClass(MenuController).singleton()
+
     })
     .register({
         ModuloRepository: asClass(ModuloRepository).singleton(),
@@ -178,18 +207,24 @@ container
         HabilitacionRepository: asClass(HabilitacionRepository).singleton(),
         DocumentoRepository: asClass(DocumentoRepository).singleton(),
         NovedadRepository: asClass(NovedadRepository).singleton(),
-        UsuarioRepository: asClass(UsuarioRepository).singleton(),
+        ClienteRepository: asClass(ClienteRepository).singleton(),
         PartePublicoRepository: asClass(PartePublicoRepository).singleton(),
         ImpactoRepository: asClass(ImpactoRepository).singleton(),
         OcurrenciaRepository: asClass(OcurrenciaRepository).singleton(),
         VotacionRepository: asClass(VotacionRepository).singleton(),
-        PerfilRepository: asClass(PerfilRepository).singleton(),
-        AsignadoRepository: asClass(AsignadoRepository).singleton(),
         ParametroRepository: asClass(ParametroRepository).singleton(),
         LogRepository: asClass(LogRepository).singleton(),
         CursoRepository: asClass(CursoRepository).singleton(),
         InscriptoRepository: asClass(InscriptoRepository).singleton(),
-        EncuestaRepository: asClass(EncuestaRepository).singleton()
+        EncuestaRepository: asClass(EncuestaRepository).singleton(),
+        EmailEditorRepository: asClass(EmailEditorRepository).singleton(),
+        UsuarioRepository: asClass(UsuarioRepository).singleton(),
+        UsuariosRepository: asClass(UsuariosRepository).singleton(),
+        MenuRepository: asClass(MenuRepository).singleton(),
+        PerfilRepository: asClass(PerfilRepository).singleton(),
+        ObjetoPerfilRepository: asClass(ObjetoPerfilRepository).singleton(),
+        PerfilAsignadoRepository: asClass(PerfilAsignadoRepository).singleton()
+
     })
     .register({
         ModuloService: asClass(ModuloService).singleton(),
@@ -201,19 +236,25 @@ container
         HabilitacionService: asClass(HabilitacionService).singleton(),
         DocumentoService: asClass(DocumentoService).singleton(),
         NovedadService: asClass(NovedadService).singleton(),
-        UsuarioService: asClass(UsuarioService).singleton(),
+        ClienteService: asClass(ClienteService).singleton(),
         PartePublicoService: asClass(PartePublicoService).singleton(),
         ImpactoService: asClass(ImpactoService).singleton(),
         OcurrenciaService: asClass(OcurrenciaService).singleton(),
         VotacionService: asClass(VotacionService).singleton(),
-        SecurityService: asClass(SecurityService).singleton(),
         ParametroService: asClass(ParametroService).singleton(),
         LogService: asClass(LogService).singleton(),
         CursoService: asClass(CursoService).singleton(),
-        EncuestaService: asClass(EncuestaService).singleton()
+        EncuestaService: asClass(EncuestaService).singleton(),
+        EmailEditorService: asClass(EmailEditorService).singleton(),
+        LoginService: asClass(LoginService).singleton(),
+        MenuService: asClass(MenuService).singleton(),
+        ProfileService: asClass(ProfileService).singleton()
     })
     .register({
-        Profile: asClass(Profile).singleton()
+        Profile: asClass(Profile).singleton(),
+        Job: asClass(Job).singleton(),
+        Login: asClass(Login).singleton(),
+        Menu: asClass(Menu).singleton()
     })
     .register({
         config: asValue(config)

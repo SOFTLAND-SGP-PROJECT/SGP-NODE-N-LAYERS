@@ -93,11 +93,6 @@ class ParteController extends Controller {
     }
     async putCambioEstado(req, res) {
         const body = req.body;
-        console.log('body');
-
-        console.log(body);
-        console.log('body');
-
         let entity = await this._entityService.putCambioEstado(body.nrocta, body.codfor, body.nrofor, body.estnew, body.asgare, body.asgres, body.obscli, body.adjunto, body.valora)
             .then((parte) => {
                 if ((parte && parte.length === 0) || !parte) {
@@ -143,6 +138,7 @@ class ParteController extends Controller {
                 });
             }).catch(
                 error => {
+                    console.log(error);
                     if (error) {
                         return res.status(500).json({
                             ok: false,
@@ -154,7 +150,7 @@ class ParteController extends Controller {
     }
     async getPartesCount(req, res) {
         const { nrocta } = req.params;
-        let entity = await this._entityService.getPartesCount(nrocta)
+        await this._entityService.getPartesCount(nrocta)
             .then((contadorDePartesPorEstado) => {
                 if ((contadorDePartesPorEstado && contadorDePartesPorEstado.length === 0) || !contadorDePartesPorEstado) {
                     return res.status(400).json({
@@ -169,6 +165,7 @@ class ParteController extends Controller {
             }).catch(
                 error => {
                     if (error) {
+                        console.log(error);
                         return res.status(500).json({
                             ok: false,
                             mensaje: 'Error en la conexión con base de datos',
@@ -179,7 +176,7 @@ class ParteController extends Controller {
     }
     async getAccionesParte(req, res) {
         const { nrocta, codfor, nrofor } = req.params;
-        let entity = await this._entityService.getAccionesParte(nrocta, codfor, nrofor)
+        await this._entityService.getAccionesParte(nrocta, codfor, nrofor)
             .then((accionesDeParte) => {
                 if ((accionesDeParte && accionesDeParte.length === 0) || !accionesDeParte) {
                     return res.status(200).json({
@@ -205,7 +202,7 @@ class ParteController extends Controller {
     }
     async getEstadosDeParte(req, res) {
         const { nrocta } = req.params;
-        var entity = await this._entityService.getEstadosDeParte(nrocta)
+        await this._entityService.getEstadosDeParte(nrocta)
             .then((estadosDePartes) => {
                 if ((estadosDePartes && estadosDePartes.length === 0) || !estadosDePartes) {
                     return res.status(400).json({
@@ -231,7 +228,7 @@ class ParteController extends Controller {
     }
     async getHistoriaParte(req, res) {
         const { nrocta, codfor, nrofor } = req.params;
-        let entity = await this._entityService.getHistoriaParte(nrocta, codfor, nrofor)
+        await this._entityService.getHistoriaParte(nrocta, codfor, nrofor)
             .then((historiaDeParte) => {
                 if ((historiaDeParte && historiaDeParte.length === 0) || !historiaDeParte) {
                     return res.status(400).json({

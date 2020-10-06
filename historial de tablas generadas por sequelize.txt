@@ -26,3 +26,4 @@ sequelize model:create --name USR_SPTOCH --attributes USR_SPTOCH_CODIGO:string,U
 sequelize model:create --name USR_SPTIMH --attributes USR_SPTIMH_CODIGO:string,USR_SPTIMH_DESCRP:string
 sequelize model:create --name GRCFOR --attributes GRCFOR_MODFOR:string,GRCFOR_CODFOR:string,GRCFOR_DESCRP:string
 sequelize model:create --name USR_SGPLOG --attributes USR_SGPLOG_NROROW:integer,USR_SGPLOG_NROCTA:string,USR_SGPLOG_CODIGO:string,USR_SGPLOG_VALORA:INTEGER,USR_SG_FECALT:date,USR_SG_FECMOD:date
+npx sequelize-cli model:create --name USR_SGPCLU --attributes USR_SGPCLU_NROCTA:string,USR_SGPCLU_SGPUID:string,USR_SGPCLU_CODCON:string,USR_SGPCLU_SGPPWD:string,USR_SGPCLU_SGPIMG:string,USR_SGPCLU_SGPLOG:date,USR_SGPCLU_INACTI:string,USR_SG_FECALT:date,USR_SG_FECMOD:date,USR_SG_USERID:string,USR_SG_DEBAJA:string

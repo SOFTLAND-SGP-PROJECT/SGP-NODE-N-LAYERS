@@ -13,17 +13,18 @@ class EncuestaRepository {
             });
     }
     async postRespuestaEncuesta(respuesta, nrocta, codpro) {
-            console.log(respuesta.tipenc, respuesta.nroenc, nrocta, respuesta.codcon, codpro, respuesta.textos, respuesta.nropre, respuesta.codres);
-            return await this._sequelize
-                .query('EXEC SLSPWEB_RegistracionEncuesta :TIPCUR, :NROENC, :NROCTA, :CODCON, :CODPRO, :TEXTOS, :NROPRE, :CODRES', {
-                    replacements: { TIPCUR: respuesta.tipenc, NROENC: respuesta.nroenc, NROCTA: nrocta, CODCON: respuesta.codcon, CODPRO: codpro, TEXTOS: respuesta.textos, NROPRE: (respuesta.nropre).toString(), CODRES: (respuesta.codres).toString() },
-                    type: this._sequelize.QueryTypes.SELECT
-                }).spread(result => {
-                    console.log(result);
-                    return result;
-                });
-        }
-        // models.sequelize
+        // console.log(respuesta.tipenc, respuesta.nroenc, nrocta, respuesta.codcon, codpro, respuesta.textos, respuesta.nropre, respuesta.codres);
+        return await this._sequelize
+            .query('EXEC SLSPWEB_RegistracionEncuesta :TIPCUR, :NROENC, :NROCTA, :CODCON, :CODPRO, :TEXTOS, :NROPRE, :CODRES', {
+                replacements: { TIPCUR: respuesta.tipenc, NROENC: respuesta.nroenc, NROCTA: nrocta, CODCON: respuesta.codcon, CODPRO: codpro, TEXTOS: respuesta.textos, NROPRE: (respuesta.nropre).toString(), CODRES: (respuesta.codres).toString() },
+                type: this._sequelize.QueryTypes.SELECT
+            }).spread(result => {
+                // console.log(result);
+                return result;
+            });
+    }
+
+    // models.sequelize
 
     // .query('DECLARE @outParam1 INT, @outParam2 INT EXEC procedureName 
     // @param1=:param, @outParam1 = @outParam1 output, @outParam2 = @outParam2 output 

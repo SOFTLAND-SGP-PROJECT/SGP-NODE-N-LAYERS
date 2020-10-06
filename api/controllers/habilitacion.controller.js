@@ -8,7 +8,7 @@ const Model = require("../models");
 
 class HabilitacionController extends Controller {
     constructor({ HabilitacionService, ParametroService, LogService }) {
-        super(HabilitacionService);
+        super(HabilitacionService, LogService);
         this._entityMap = Model.habilitacion;
     }
     async getNovedades(req, res) {
@@ -66,8 +66,9 @@ class HabilitacionController extends Controller {
     async postHabilitacion(req, res) {
         var { nrocta, tipo, opcion, mail, motivo, filename } = req.params;
         var company, suc, data;
+        console.log(filename);
         if (!req.files) {
-            this._logService.postLog('Licencia', 'Subida de licencia', 'El archivo no fue adjuntado', 'error de carga de archivos', nrocta);
+            // this._logService.postLog('Licencia', 'Subida de licencia', 'El archivo no fue adjuntado', 'error de carga de archivos', nrocta);
 
             return res.status(400).json({
                 ok: false,
@@ -76,7 +77,7 @@ class HabilitacionController extends Controller {
             });
         }
         if (!req.files || Object.keys(req.files).length === 0) {
-            this._logService.postLog('Licencia', 'Subida de licencia', 'El archivo no fue adjuntado', 'error de carga de archivos', nrocta);
+            // this._logService.postLog('Licencia', 'Subida de licencia', 'El archivo no fue adjuntado', 'error de carga de archivos', nrocta);
             return res.status(400).send('No hay archivos para subir.');
         }
         let path = this.crearFolder(nrocta, filename);
@@ -92,7 +93,7 @@ class HabilitacionController extends Controller {
             }).catch(
                 error => {
                     console.log(error);
-                    this._logService.postLog('Licencia', 'Subida de licencia', error, 'error de conexion', nrocta);
+                    // this._logService.postLog('Licencia', 'Subida de licencia', error, 'error de conexion', nrocta);
 
                     if (error) {
                         return res.status(500).json({
@@ -105,12 +106,21 @@ class HabilitacionController extends Controller {
     }
     crearFolder(nrocta, folderName) {
         var dirPath = `${rutaZI}/${nrocta}/${folderName}/`;
+        if (!fs.existsSync(`${rutaZI}/${nrocta}`)) {
+            try {
+                fs.mkdirSync(`${rutaZI}/${nrocta}`);
+            } catch (e) {
+                console.log("Error: " + dirPath);
+                // this._logService.postLog('Licencia', 'Subida de licencia', e, 'error creando carpeta', nrocta);
+
+            }
+        }
         if (!fs.existsSync(dirPath)) {
             try {
                 fs.mkdirSync(dirPath);
             } catch (e) {
                 console.log("Error: " + dirPath);
-                this._logService.postLog('Licencia', 'Subida de licencia', e, 'error creando carpeta', nrocta);
+                // this._logService.postLog('Licencia', 'Subida de licencia', e, 'error creando carpeta', nrocta);
 
             }
         }
@@ -125,7 +135,7 @@ class HabilitacionController extends Controller {
         file.mv(pathNuevo, function(error, response) {
             if (error) {
                 console.log(error);
-                this._logService.postLog('Licencia', 'Subida de licencia', error, 'error de subida de archivo', nrocta);
+                // this._logService.postLog('Licencia', 'Subida de licencia', error, 'error de subida de archivo', nrocta);
 
                 if (response) {
                     return response.status(500).json({

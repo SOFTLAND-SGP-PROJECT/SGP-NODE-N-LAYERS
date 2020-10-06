@@ -1,13 +1,14 @@
-const Controller = require("./controller");
+const { response } = require('express');
 
 class SecurityController {
     constructor({ Profile }) {
         this._entityBuisness = Profile;
     }
-    async getPerfiles(req, res) {
-        const entities = await this._entityBuisness.getPerfiles()
+    async getPerfiles(req, res = response) {
+        const { nrocta } = req.params;
+        return await this._entityBuisness.getPerfiles(nrocta)
             .then(perfiles => {
-                if (!perfiles) {
+                if (perfiles.length === 0) {
                     return res.status(400).json({
                         ok: false,
                         message: 'No hay perfiles cargados',
@@ -19,93 +20,92 @@ class SecurityController {
                 });
             })
             .catch(error => {
-                console.log(error);
-
                 return res.status(500).json({
                     ok: false,
                     payload: error
                 });
             });
-    };
-    async getPerfilNombre(req, res) {
-        var { nombre } = req.params
-
-        const entities = await this._entityBuisness.getPerfilNombre(nombre)
+    }
+    async getPerfilById(req, res = response) {
+        var { id } = req.params
+        await this._entityBuisness.getPerfilById(id)
             .then(perfiles => {
-                if (!perfiles) {
-                    return res.status(400).json({
-                        ok: false,
-                        message: 'No hay perfiles cargados',
-                    });
-                }
+                console.log(perfiles);
                 return res.status(200).json({
                     ok: true,
                     payload: perfiles
                 });
             })
             .catch(error => {
-                console.log(error);
-
                 return res.status(500).json({
                     ok: false,
                     payload: error
                 });
             });
-    };
-    async getAsignadoMail(req, res) {
-        var { email } = req.params;
-        console.log(email);
-
-        const entities = await this._entityBuisness.getAsignadoMail(email)
-            .then(asignado => {
-                if (!asignado) {
-                    return res.status(400).json({
-                        ok: false,
-                        message: 'No hay perfiles cargados',
-                    });
-                }
-                return res.status(200).json({
+    }
+    async getPerfilesAsignados(req, res = response) {
+        var { nrocta, id } = req.params;
+        await this._entityBuisness.getPerfilesAsignados(nrocta, id)
+            .then((data) => {
+                return res.status(201).json({
                     ok: true,
-                    payload: asignado
-                });
-            })
-            .catch(error => {
-                console.log(error);
-
-                return res.status(500).json({
-                    ok: false,
-                    payload: error
+                    payload: data
                 });
             });
-    };
-    async postPerfilSeguridad(req, res) {
+    }
+    async getMenu(req, res = response) {
         var perfil = req.body;
-        const entities = await this._entityBuisness.postPerfil(perfil.nombre, perfil.avatar, perfil.asignados, perfil.ruta);
-        return res.status(200).json({
-            ok: true,
-            payload: 'perfilSeguridad'
-        });
-        // 
-        //     .then((perfilSeguridad) => {
-        //         if ((perfilSeguridad && perfilSeguridad.length === 0) || !perfilSeguridad) {
-        //             return res.status(400).json({
-        //                 ok: false,
-        //                 message: 'El perfil no se pudo cargar',
-        //             });
-        //         }
-        //         return res.status(201).json({
-        //             ok: true,
-        //             payload: `Perfil de Seguridad ${perfilSeguridad} cargado con Exito`
-        //         });
-        //     })
-        //     .catch(error => {
-        //         console.log(error);
+        await this._entityBuisness.getMenu(perfil.nrocta, perfil.sgpuid)
+            .then((menu) => {
+                return res.status(201).json({
+                    ok: true,
+                    payload: menu
+                });
+            })
+    }
+    async postAsignarAdmin(req, res = response) {
+        var admin = req.body;
+        var { nrocta } = req.params;
+        await this._entityBuisness.postAsignarAdmin(nrocta, admin.SGPUID, admin.PERFIL, admin.USERID)
+            .then(() => {
+                return res.status(201).json({
+                    ok: true,
+                    payload: 'Perfil de Seguridad cargado con Exito'
+                });
+            })
+    }
+    async putPerfilSeguridad(req, res = response) {
+        var perfil = req.body;
+        var { nrocta } = req.params;
+        await this._entityBuisness.putPerfilSeguridad(perfil.descrip, perfil.avatar, nrocta, perfil.ruta, perfil.asignados, perfil.userid, perfil.codigo)
+            .then(() => {
+                return res.status(201).json({
+                    ok: true,
+                    payload: 'Perfil de Seguridad cargado con Exito'
+                });
+            })
+    }
+    async postPerfilSeguridad(req, res = response) {
+        var perfil = req.body;
+        var { nrocta } = req.params;
+        await this._entityBuisness.postPerfil(perfil.descrip, perfil.avatar, nrocta, perfil.ruta, perfil.asignados, perfil.userid)
+            .then(() => {
+                return res.status(201).json({
+                    ok: true,
+                    payload: 'Perfil de Seguridad cargado con Exito'
+                });
+            })
 
-        //         return res.status(500).json({
-        //             ok: false,
-        //             payload: error
-        //         });
-        //     });
+    }
+    async deletePerfilSeguridad(req, res = response) {
+        var { nrocta, id } = req.params;
+        await this._entityBuisness.deletePerfil(nrocta, id)
+            .then(() => {
+                return res.status(201).json({
+                    ok: true,
+                    payload: 'Perfil borrado con exito'
+                });
+            })
     }
 }
 module.exports = SecurityController;

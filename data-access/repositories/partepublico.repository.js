@@ -1,5 +1,5 @@
 const Repository = require("./repository");
-const path = require('path');
+// const path = require('path');
 const fs = require('fs');
 class PartePublicoRepository extends Repository {
     constructor({ db }) {
@@ -10,12 +10,12 @@ class PartePublicoRepository extends Repository {
         this.resultado = {};
     }
     postParte(parte) {
-        const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const Op = this._Op;
+        // const sequelize = this._Sequelize;
         return this._db.USR_SPTERH.create(parte, { include: [{ model: this._db.USR_SPTERI, as: "items" }] });
     }
     getAllWithTermino(tippub, codigo) {
-        console.log(tippub, codigo);
+        // console.log(tippub, codigo);
         return this._Sequelize
             .query('EXEC SLSPWEB_PartesPublicos :TIPPUB, :TEXTO ', {
                 replacements: { TIPPUB: tippub, TEXTO: codigo },
@@ -24,12 +24,12 @@ class PartePublicoRepository extends Repository {
                 return {
                     count: 1,
                     partes: data
-                }
+                };
             });
     }
     get(tippub, codigo) {
         const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const sequelize = this._Sequelize;
         return this._db[this.entity].findOne({
                 limit: 15,
                 where: {
@@ -54,7 +54,7 @@ class PartePublicoRepository extends Repository {
     }
     getAllWithTipo(tippub) {
         const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const sequelize = this._Sequelize;
         let whereStr = { USR_SPTERH_TIPPUB: tippub }
         let contarResultados = Promise.resolve(this.contarResultados(whereStr))
         return contarResultados.then((count) => {
@@ -72,7 +72,7 @@ class PartePublicoRepository extends Repository {
     }
     getSomeWithFilters(tippub, terminos) {
         const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const sequelize = this._Sequelize;
         terminos = terminos.split(",");
         return this._db[this.entity].findAll({
                 where: {
@@ -94,20 +94,17 @@ class PartePublicoRepository extends Repository {
     }
     getAllWithSearchFilters(tippub, modulo, objeto, version, termino, offset, limit) {
         const Op = this._Op;
-        const sequelize = this._Sequelize;
+        // const sequelize = this._Sequelize;
 
         var resultado = { partes: '', count: 0 }
         modulo = (modulo === 'undefined' || modulo === 'null' ? "" : modulo);
         objeto = (objeto === 'undefined' || objeto === 'null' ? "" : objeto);
         version = (version === 'undefined' || version === 'null' ? "" : version);
         termino = (termino === 'undefined' || termino === 'null' ? "" : termino);
-        console.log(tippub, modulo, objeto, version, termino, offset, limit);
         let whereStr = []
         let where = {
             USR_SPTERH_TIPPUB: tippub,
         }
-        console.log(version);
-
         if (version !== "") {
             where = {
                 ...where,
@@ -126,8 +123,6 @@ class PartePublicoRepository extends Repository {
                 USR_SPTERH_OBJETO: objeto
             }
         }
-        console.log(where);
-
         whereStr.push(where);
         whereStr.push({
             [Op.or]: [{

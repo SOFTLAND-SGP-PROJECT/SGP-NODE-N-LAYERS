@@ -6,24 +6,25 @@ class ContactoService extends Service {
         this._entityRepository = ContactoRepository;
     }
     async getAllWithTwoParams(nrocta, termino) {
-        const entities = await this._entityRepository.getAllWithTwoParams(nrocta, termino);
-        return entities;
+        return await this._entityRepository.getAllWithTwoParams(nrocta, termino);
     }
     async getAllWithOneParams(nrocta) {
-        const entities = await this._entityRepository.getAllWithOneParams(nrocta);
-        return entities;
+        return await this._entityRepository.getAllWithOneParams(nrocta);
     }
-    async postCrearContacto(nrocta, nombre, apelli, tipsex, direml, celula, enviis, envife, conabo, maihab) {
-        const entities = await this._entityRepository.postCrearContacto(nrocta, nombre, apelli, tipsex, direml, celula, enviis, envife, conabo, maihab);
-        return entities;
+    async postCrearContacto(nrocta, nombre, apelli, tipsex, direml, celula, enviis, envife, conabo, maihab, encues) {
+        return await this._entityRepository.postCrearContacto(nrocta, nombre, apelli, tipsex, direml, celula, enviis, envife, conabo, maihab, encues);
     }
     async putActualizarContacto(nrocta, codcon, direml, celula, enviis, envife, conabo, maihab) {
-        const entities = await this._entityRepository.putActualizarContacto(nrocta, codcon, direml, celula, enviis, envife, conabo, maihab);
-        return entities;
+        return await this._entityRepository.putActualizarContacto(nrocta, codcon, direml, celula, enviis, envife, conabo, maihab);
     }
     async deleteEliminarContacto(nrocta, codcon) {
-        const entities = await this._entityRepository.deleteEliminarContacto(nrocta, codcon);
-        return entities;
+        return await this._entityRepository.deleteEliminarContacto(nrocta, codcon);
+    }
+    async findOneByUid(uid) {
+        return await this._entityRepository.findOneByUid(uid);
+    }
+    async findOneByNrocta(nrocta) {
+        return await this._entityRepository.findOneByNrocta(nrocta);
     }
 }
 

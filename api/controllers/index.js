@@ -6,7 +6,7 @@ module.exports = {
     VersionController: require("./version.controller"),
     ContactoController: require("./contacto.controller"),
     PartePublicoController: require("./partepublico.controller"),
-    UsuarioController: require("./usuario.controller"),
+    ClienteController: require("./cliente.controller"),
     HabilitacionController: require("./habilitacion.controller"),
     NovedadController: require("./novedad.controller"),
     DocumentoController: require("./documento.controller"),
@@ -20,5 +20,9 @@ module.exports = {
     LoginController: require("./login.controller"),
     ParametroController: require("./parametro.controller"),
     CursoController: require("./curso.controller"),
-    EncuestaController: require("./encuesta.controller")
+    EncuestaController: require("./encuesta.controller"),
+    LoginNewController: require("./login-new.controller"),
+    EmailEditorController: require("./emailEditor.controller"),
+    JobController: require("./job.controller"),
+    MenuController: require("./menu.controller")
 };
