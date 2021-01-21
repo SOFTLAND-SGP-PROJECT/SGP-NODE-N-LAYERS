@@ -1,0 +1,3 @@
+Listening on pipe \\.\pipe\4d8a0ff2-6194-4b42-88cc-755af260bb5f
+Base de datos mariner en el puerto: 1433 [36monline[0m
+Base de datos saradm en el puerto: 1433 [36monline[0m

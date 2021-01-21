@@ -1,9 +1,0 @@
-Listening on pipe \\.\pipe\a84e938e-9a06-4db4-b1c2-3a08ec84d99b
-Base de datos mongo en el puerto: 27017 [36monline[0m
-//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
-[ 'CL 17299', 'Prueba' ]
-Base de datos en el puerto: 1433 [36monline[0m
-//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
-[ 'CL 17299', 'Prueba' ]
-//Apollo/Global/Sistema de Gestion/uploads/sac/intercambio
-[ 'CL 17299', 'Prueba' ]

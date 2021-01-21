@@ -1,3 +1,0 @@
-Listening on pipe \\.\pipe\c9cd6842-ace0-4dbb-9561-eb426fad5375
-Base de datos mongo en el puerto: 27017 [36monline[0m
-Base de datos en el puerto: 1433 [36monline[0m

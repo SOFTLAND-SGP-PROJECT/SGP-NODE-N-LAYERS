@@ -1,2 +1,0 @@
-Listening on pipe \\.\pipe\b3ad270e-d594-4897-9959-7fe72811d8e0
-Base de datos en el puerto: 1433 [36monline[0m
