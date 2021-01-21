@@ -6,15 +6,19 @@ module.exports = {
     VersionService: require("./version.service"),
     ContactoService: require("./contacto.service"),
     PartePublicoService: require("./partepublico.service"),
-    UsuarioService: require("./usuario.service"),
+    ClienteService: require("./cliente.service"),
     HabilitacionService: require("./habilitacion.service"),
     NovedadService: require("./novedad.service"),
     DocumentoService: require("./documento.service"),
     OcurrenciaService: require("./ocurrencia.service"),
     ImpactoService: require("./impacto.service"),
     VotacionService: require("./votacion.service"),
-    SecurityService: require("./security.service"),
     ParametroService: require("./parametro.service"),
     LogService: require("./log.service"),
-    CursoService: require("./curso.service")
+    CursoService: require("./curso.service"),
+    EncuestaService: require("./encuesta.service"),
+    EmailEditorService: require("./emailEditor.service"),
+    LoginService: require("./login.service"),
+    MenuService: require("./menu.service"),
+    ProfileService: require("./profile.service")
 };

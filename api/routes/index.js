@@ -1,8 +1,12 @@
 // const { Router } = require('express');
 var express = require('express');
 const bodyParser = require('body-parser');
+require('dotenv').config()
 const cors = require("cors");
 const compression = require('compression');
+const { check } = require('express-validator');
+const { checkingFields } = require('../middlewares/fields.valid');
+const { validJWT } = require('../middlewares/token.valid');
 var http = require('http');
 // const { Token } = require('./../controllers/login.controller');
 let token;
@@ -17,7 +21,7 @@ module.exports = function({
     ContactoRoutes,
     VersionRoutes,
     PartePublicoRoutes,
-    UsuarioRoutes,
+    ClienteRoutes,
     HabilitacionRoutes,
     NovedadRoutes,
     DocumentoRoutes,
@@ -29,65 +33,36 @@ module.exports = function({
     SecurityRoutes,
     ImagenPerfilRoutes,
     LoginRoutes,
+    LoginNewRoutes,
     ParametroRoutes,
-    CursoRoutes
+    CursoRoutes,
+    EncuestaRoutes,
+    EmailEditorRoutes,
+    JobRoutes,
+    MenuRoutes
 }) {
-
     const router = express.Router();
     const apiRoute = express.Router();
+
     apiRoute
         .use(cors())
         .use(bodyParser.urlencoded({ extended: false }))
         .use(bodyParser.json())
         .use(compression());
-    // apiRoute.get("/login/:uid/:pwd", (req, res) => {
-    //     var { uid, pwd } = req.params;
-    //     var options = {
-    //         host: 'logic.softland.com.ar',
-    //         port: '3030',
-    //         path: '/login',
-    //         headers: {
-    //             'uid': uid,
-    //             'pwd': pwd
-    //         }
-    //     };
-    //     var request = http.get(options, function(response) {
-    //         response.setEncoding('utf8');
-
-    //         response.on('data', function(chunk) {
-    //             let usuario = JSON.parse(chunk);
-    //             token = usuario.token;
-    //             return res.status(200).json({
-    //                 ok: true,
-    //                 token: usuario.token,
-    //                 username: usuario.username,
-    //                 empresa: {
-    //                     name: usuario.empresa.name,
-    //                     logo: usuario.empresa.logo
-    //                 },
-    //                 actions: usuario.actions,
-    //                 lastLogin: usuario.lastLogin,
-    //                 error: usuario.error
-    //             });
-    //         });
-    //     });
-    // });
-    // apiRoute
-    //     .use((req, res, next) => {
-    //         console.log('token servidor: ', token);
-    //         console.log('token cliente: ', req.headers.token);
-    //         // if (token === req.headers.token || token === 'file') {
-    //             next();
-    //         }
-    //     });
     apiRoute.use("/login", LoginRoutes);
+    apiRoute.use("/login-new", [
+        check('SGPUID', 'El usuario no puede ser vacio').not().isEmpty(),
+        check('SGPPWD', 'El password no puede ser vacio').not().isEmpty(),
+        checkingFields
+    ], LoginNewRoutes);
+    apiRoute.use("/usuarioSGP", LoginNewRoutes);
     apiRoute.use("/votacion", VotacionRoutes);
     apiRoute.use("/estado", SptestRoutes);
     apiRoute.use("/parte", ParteRoutes);
     apiRoute.use("/modulo", ModuloRoutes);
     apiRoute.use("/objeto", ObjetoRoutes);
     apiRoute.use("/version", VersionRoutes);
-    apiRoute.use("/usuario", UsuarioRoutes);
+    apiRoute.use("/usuario", ClienteRoutes);
     apiRoute.use("/contacto", ContactoRoutes);
     apiRoute.use("/novedad", NovedadRoutes);
     apiRoute.use("/habilitacion", HabilitacionRoutes);
@@ -102,7 +77,10 @@ module.exports = function({
     apiRoute.use("/perfil", ImagenPerfilRoutes);
     apiRoute.use("/parametro", ParametroRoutes);
     apiRoute.use("/curso", CursoRoutes);
-
+    apiRoute.use("/encuesta", EncuestaRoutes);
+    apiRoute.use("/emailEditor", EmailEditorRoutes);
+    apiRoute.use("/job", JobRoutes);
+    apiRoute.use("/menu", MenuRoutes);
     router.use("/", apiRoute);
     return router;
 };

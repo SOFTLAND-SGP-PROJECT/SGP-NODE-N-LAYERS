@@ -138,7 +138,6 @@ class PartePublicoController extends Controller {
     async getImagenes(req, res) {
         const { tipo, img } = req.params;
         var pathImagen = path.resolve(__dirname, `../upload/${tipo}/${img}`);
-        console.log(pathImagen);
 
         if (fs.existsSync(pathImagen)) {
             await res.sendFile(pathImagen);

@@ -5,6 +5,7 @@ const socketIO = require('socket.io');
 const path = require('path');
 const fs = require('fs');
 const { rutaZI } = require('../config/config');
+require('dotenv').config()
 class Server {
 
     constructor({ router }) {
@@ -21,22 +22,25 @@ class Server {
             var dirPath = `${rutaZI}/`;
             io.on('connection', (socket) => {
                 let folderFile = [];
-                socket.on('usuario', (data) => {
-                    let dir = `${dirPath}${data}/intercambio`;
-                    if (fs.existsSync(`${dir}`)) {
-                        console.log(dir);
-                        var files = fs.readdirSync(`${dir}`);
-                        console.log(files);
-                        if (files.length > 1) {
-                            folderFile = [];
-                            folderFile = this.getFiles(`${dir}`, folderFile);
-                            socket.emit('new-tree', folderFile.map(data => data.replace("intercambio", "Mis documentos")));
+                socket.on('usuario', async data => {
+                    console.log(data);
+                    if (data) {
+                        let dir = `${dirPath}${data}/intercambio`;
+                        if (await fs.existsSync(`${dir}`)) {
+                            console.log(dir);
+                            var files = await fs.readdirSync(`${dir}`);
+                            console.log(files);
+                            if (files.length > 1) {
+                                folderFile = [];
+                                folderFile = this.getFiles(`${dir}`, folderFile);
+                                socket.emit('new-tree', folderFile.map(data => data.replace("intercambio", "Mis documentos")));
+                            } else {
+                                socket.emit('new-tree', []);
+                            }
                         } else {
+                            await fs.mkdirSync(`${dirPath}${data}/intercambio`);
                             socket.emit('new-tree', []);
                         }
-                    } else {
-                        fs.mkdirSync(`${dirPath}${data}/intercambio`);
-                        socket.emit('new-tree', []);
                     }
                 });
             });

@@ -6,12 +6,19 @@ module.exports = {
     VersionRepository: require("./Version.repository"),
     ContactoRepository: require("./contacto.repository"),
     PartePublicoRepository: require("./partepublico.repository"),
-    UsuarioRepository: require("./usuario.repository"),
+    ClienteRepository: require("./cliente.repository"),
     HabilitacionRepository: require("./habilitacion.repository"),
     NovedadRepository: require("./novedad.repository"),
     DocumentoRepository: require("./documento.repository"),
     OcurrenciaRepository: require("./ocurrencia.repository"),
     ImpactoRepository: require("./impacto.repository"),
     VotacionRepository: require("./votacion.repository"),
-    CursoRepository: require("./curso.repository")
+    CursoRepository: require("./curso.repository"),
+    EncuestaRepository: require("./encuesta.repository"),
+    UsuarioRepository: require("./usuario.repository"),
+    UsuariosRepository: require("./usuarios.repository"),
+    MenuRepository: require("./menu.repository"),
+    PerfilRepository: require("./perfil.repository"),
+    ObjetoPerfilRepository: require("./objetoPerfil.repository"),
+    PerfilAsignadoRepository: require("./perfilAsignado.repository")
 };

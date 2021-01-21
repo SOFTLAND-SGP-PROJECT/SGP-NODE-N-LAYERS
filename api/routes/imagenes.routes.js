@@ -6,5 +6,6 @@ module.exports = function({ ImagenesController }) {
 
     router.get("/:tipo/:parte/:folder/:img", ImagenesController.getImagenes.bind(ImagenesController));
     router.get("/:codigo/:tipo", ImagenesController.getImagenesCursos.bind(ImagenesController));
+    router.get("/perfil/logo/:nrocta/:tipo/:sgpuid", ImagenesController.getImagenesPerfil.bind(ImagenesController))
     return router;
 };

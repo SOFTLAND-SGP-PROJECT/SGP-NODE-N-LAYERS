@@ -2,12 +2,12 @@ const Controller = require("./controller");
 const jsonMapper = require('json-mapper-json');
 const Models = require("../models");
 
-class UsuarioController extends Controller {
+class ClienteController extends Controller {
 
-    constructor({ UsuarioService }) {
-        super(UsuarioService, Models);
+    constructor({ ClienteService }) {
+        super(ClienteService, Models);
         this._entityMap = Models.usuario;
-        this._entityService = UsuarioService;
+        this._entityService = ClienteService;
     }
     async getUsuario(req, res) {
         const { id } = req.params;
@@ -26,5 +26,22 @@ class UsuarioController extends Controller {
                 });
             });
     }
+    async getUsuarioByNrocta(req, res) {
+        const { direml } = req.params;
+        return await this._entityService.getUsuarioByNrocta(direml)
+            .then((data) => {
+                return res.status(200).json({
+                    ok: true,
+                    payload: data
+                });
+            })
+            .catch(error => {
+                return res.status(500).json({
+                    ok: false,
+                    payload: error
+                });
+            });
+
+    }
 }
-module.exports = UsuarioController;
+module.exports = ClienteController;
