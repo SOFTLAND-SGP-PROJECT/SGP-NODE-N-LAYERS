@@ -26,7 +26,7 @@
     "sequelize": "^5.19.2",
     "sequelize-auto-migrations": "^1.0.3",
     "serve-index": "^1.9.1",
-    "socket.io": "^2.3.0",
+    "socket.io": "^2.4.0",
     "socketio-file-upload": "^0.7.0",
     "tedious": "^6.2.0",
     "use-strict": "^1.0.1"
