@@ -5,9 +5,10 @@ class Job {
         this._entityService = EmailEditorService;
     }
     async execute(script) {
-        console.log(script);
-        return await this.processFunction(script);
-    }
+            console.log(script);
+            return await this.processFunction(script);
+        }
+        //login generardo
     processFunction(script) {
         if (script.ok) {
             console.log("Hola mundo");
